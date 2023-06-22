@@ -2,7 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_nedekyn_andando(){
 	//mexe representa os botões que fazem o Nedekyn andar 
-	mexe =  - keyboard_check(ord("A"))+keyboard_check(ord("D"))
+	
+	mexe =  - keyboard_check(ord("A")) +keyboard_check(ord("D")) 
+	
 andandospd=mexe*spid
 //se o Nedekyn encosta na parede enquando anda, o Nedekyn para
 if place_meeting(x+andandospd,y,obj_block){

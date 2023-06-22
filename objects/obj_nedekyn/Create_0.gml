@@ -3,8 +3,8 @@
 pulandospd=0
 spid=4.0
 spid2=4.0
-dashspd = 20
-dashspd2 = 20
+dashspd = 27
+dashspd2 = 27
 dashes = 1
 dashes2=1
 atacspd=2

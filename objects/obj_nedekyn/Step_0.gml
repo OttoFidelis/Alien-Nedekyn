@@ -44,7 +44,7 @@ if alarm[3]>0{
 	alarm[1] = 600
 }
 //se o Nedekyn está atacando, ele não pode mudar de animação depois de 10 segundos
-if keyboard_check(ord("V")){
+if dash=1{
 	alarm[1] = 600
 }
 //se o Nedekyn está pulando, ele não pode mudar de animação depois de 10 segundos
