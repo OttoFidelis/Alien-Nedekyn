@@ -63,6 +63,11 @@ function scr_nedekyn_pulando(){
 	pulandospd=0
 }
 y+=pulandospd
+if pular =1{
+			if pulos =1{
+				instance_create_layer(x,y-10,"Instances",obj_efeito_duplopulo)
+			}
+		}
 //se o Nedekyn está no chão, ele pode pular
 if place_meeting(x,y+1,obj_block){
 	jumptime=0
@@ -85,6 +90,7 @@ if pular = 1 && pulos>0{
 			pulandospd=impulsopulospeed
 			jumptime--
 		}
+		
 		}
 //se o Nedekyn não está no chão, ele exibe a animação de pulo
  

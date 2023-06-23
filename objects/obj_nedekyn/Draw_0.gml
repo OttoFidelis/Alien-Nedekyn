@@ -36,7 +36,7 @@ if pulandospd = 0{
 	
 	}
 }
-if alarm[3]>0{
-	draw_text(x+120,y-80,"Dashando")
-}
+
+	draw_text(x+120,y-80,"pulos: "+ string(pulos))
+
 }

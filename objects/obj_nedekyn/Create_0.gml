@@ -12,8 +12,8 @@ atacspd2=2
 //pulo
 gravid=0.5
 gravid2=0.5
-impulsopulospeed=-8
-impulsopulospeed2=-8
+impulsopulospeed=-9
+impulsopulospeed2=-9
 esta = scr_nedekyn_andando
 jumps=2
 jumpframes=5
