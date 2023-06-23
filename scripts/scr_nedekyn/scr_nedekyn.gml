@@ -65,7 +65,7 @@ function scr_nedekyn_pulando(){
 y+=pulandospd
 //se o Nedekyn está no chão, ele pode pular
 if place_meeting(x,y+1,obj_block){
-	
+	jumptime=0
 	pulos=2
 }
 else{
@@ -79,12 +79,13 @@ if pular = 1 && pulos>0{
 		pulos-=1
 		jumptime=jumpframes
 		}
+		if pulos >=1{
 		if !pularhold {jumptime=0}
 		if jumptime >0{
 			pulandospd=impulsopulospeed
 			jumptime--
 		}
-		
+		}
 //se o Nedekyn não está no chão, ele exibe a animação de pulo
  
 if pulandospd<0{

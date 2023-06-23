@@ -12,11 +12,11 @@ atacspd2=2
 //pulo
 gravid=0.5
 gravid2=0.5
-impulsopulospeed=-6
-impulsopulospeed2=-6
+impulsopulospeed=-8
+impulsopulospeed2=-8
 esta = scr_nedekyn_andando
 jumps=2
-jumpframes=12
+jumpframes=5
 jumptime=0
 //luta, vida e dano
 vida = 25
