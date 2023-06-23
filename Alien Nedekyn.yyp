@@ -30,6 +30,7 @@
     {"id":{"name":"Sprite15","path":"sprites/Sprite15/Sprite15.yy",},"order":9,},
     {"id":{"name":"spr_vida","path":"sprites/spr_vida/spr_vida.yy",},"order":2,},
     {"id":{"name":"spr_block2","path":"sprites/spr_block2/spr_block2.yy",},"order":6,},
+    {"id":{"name":"obj_dash","path":"objects/obj_dash/obj_dash.yy",},"order":7,},
     {"id":{"name":"room_test","path":"rooms/room_test/room_test.yy",},"order":0,},
   ],
   "Options": [

@@ -54,6 +54,7 @@ if keyboard_check_pressed(ord("V")){
 //pulo
 function scr_nedekyn_pulando(){
 	pular = +keyboard_check_pressed(vk_space)
+	pularhold = +keyboard_check(vk_space)
 	//Se o Nedekyn encosta no chão, ele para de cair
 	if place_meeting(x,y+pulandospd,obj_block){
 	while !place_meeting(x,y+sign(pulandospd),obj_block){
@@ -64,23 +65,31 @@ function scr_nedekyn_pulando(){
 y+=pulandospd
 //se o Nedekyn está no chão, ele pode pular
 if place_meeting(x,y+1,obj_block){
-	if pular = 1{
-        image_index=0
-		pulandospd=impulsopulospeed
-		}
 	
+	pulos=2
 }
 else{
 	pulandospd+=gravid
+	if pulos=2{
+		pulos=1
+	}
 }
-
+if pular = 1 && pulos>0{
+		pulandospd=impulsopulospeed
+		pulos-=1
+		jumptime=jumpframes
+		}
+		if !pularhold {jumptime=0}
+		if jumptime >0{
+			pulandospd=impulsopulospeed
+			jumptime--
+		}
+		
 //se o Nedekyn não está no chão, ele exibe a animação de pulo
  
 if pulandospd<0{
 	sprite_index = spr_nedekyn_jump1
-	if keyboard_check_pressed(ord("C")){
-		sprite_index=spr_nedekyn_dash
-	}
+	
 }
 else if pulandospd>0{
 	sprite_index = spr_nedekyn_fall
@@ -91,74 +100,6 @@ else if pulandospd>0{
 }
  
 }
-
-//dash
-function scr_nedekyn_dash(){
-dash = +keyboard_check_pressed(ord("C"))
-//velocidade do dash
-andandospd = lerp(spid,dashspd,0.1)*image_xscale
-// se o Nedekyn encosta na parede enquanto faz o dash, ele para
-	if place_meeting(x+andandospd,y,obj_block){
-		
-		andandospd=0
-		dashes2=0
-	}
-	// se o Nedekyn não está no chão, ele só faz um dash
-if !place_meeting (x,y+1,obj_block){
-	if dashes = 0{
-		dash = 0
-	}
-	if dash = 1{
-		dashes-=1
-	}
-}
-	else{
-	dashes = 1
-}
-
-//se o Nedekyn está no ar, ele está liberado para dar dash, mesmo se ele tinha acabado de dar dash no chão
-	if pulandospd !=0{
-	alarm[4]=0
-}
-//se  ele acabou de dar dash, ele só pode dar dash de novo depois de 1 segundo
-if dashes2 = 0{
-		dash = 0
-}
-
-if alarm[4]>0{
-	dashes2 = 0
-}
-else{
-	dashes2 = 1
-}
-//Se o jogador aperta o botão de dash, animação de dash reinicia
-if dash = 1 {
-	image_index = 0
-	alarm[3] = 12
-}
-//se o Nedekyn faz o dash, ele acelera na direção que ele está e ele para de cair ou subir quando pula
-if alarm[3]>0{
-	
-	esta=scr_nedekyn_dash
-	
-alarm[4]=15
-	
-	gravid = 0
-	impulsopulospeed = 0
-	pulandospd = 0
-	if mexe = 0{
-		x+=andandospd
-	}
-	else{
-		x+=andandospd
-	}
-	}
-if esta=scr_nedekyn_dash{
-	sprite_index=spr_nedekyn_dash
-}
-
-}	
-
 
 
 
