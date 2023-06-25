@@ -3,7 +3,8 @@
 script_execute(esta)
 //pulo
 scr_nedekyn_pulando()
-
+//wall jump
+scr_nedekyn_wall_jump()
 
 //agachar
 scr_nedekyn_agachando()

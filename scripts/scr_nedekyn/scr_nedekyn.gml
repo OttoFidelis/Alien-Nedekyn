@@ -4,8 +4,8 @@ function scr_nedekyn_andando(){
 	//mexe representa os botões que fazem o Nedekyn andar 
 	
 	mexe =  - keyboard_check(ord("A")) +keyboard_check(ord("D")) 
-	
-andandospd=mexe*spid
+podeandandospd=lerp(podeandandospd,0,0.5)	
+if podeandandospd<=0 andandospd=mexe*spid
 //se o Nedekyn encosta na parede enquando anda, o Nedekyn para
 if place_meeting(x+andandospd,y,obj_block){
 	while !place_meeting(x+sign(andandospd),y,obj_block){
@@ -15,11 +15,8 @@ if place_meeting(x+andandospd,y,obj_block){
 }
 //Esse código representa a direção que o Nedekyn está
 if place_meeting(x,y+1,obj_block){
-if mexe=1{
-	sprite_index = spr_nedekyn_run
-	
-}
-if mexe=-1{
+
+if andandospd!=0{
 	sprite_index = spr_nedekyn_run
 
 }
@@ -28,10 +25,10 @@ if andandospd==0{
 }
 
 }
-if mexe=1{
+if andandospd>0{
 	image_xscale=1
 }
-if mexe =-1{
+if andandospd<0{
 	image_xscale=-1
 }
 x+=andandospd
@@ -106,6 +103,7 @@ else if pulandospd>0{
 	}
 }
  
+    
 }
 
 
@@ -171,4 +169,23 @@ x+=atacspdas
 	}
 	
 }
-
+function scr_nedekyn_wall_jump(){
+	var parede = place_meeting(x-1,y,obj_block)|| place_meeting(x+1,y,obj_block)
+	if (parede and !place_meeting(x,y+1,obj_block)){
+		pulos=0
+		podeandandospd=2
+		if pulandospd >= 1{
+			sprite_index=spr_nedekyn_wall
+		pulandospd=3
+		}
+		
+		if pular=1{
+			
+			andandospd-=5 * image_xscale
+			podeandandospd=5
+			pulandospd=-10
+		}
+		
+	}
+	else jumpframes=8 spid=spid2
+}

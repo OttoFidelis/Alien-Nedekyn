@@ -26,6 +26,7 @@
     {"id":{"name":"obj_colisao","path":"objects/obj_colisao/obj_colisao.yy",},"order":3,},
     {"id":{"name":"obj_nedekyn","path":"objects/obj_nedekyn/obj_nedekyn.yy",},"order":1,},
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"order":0,},
+    {"id":{"name":"spr_nedekyn_wall","path":"sprites/spr_nedekyn_wall/spr_nedekyn_wall.yy",},"order":12,},
     {"id":{"name":"spr_efeito_duplopulo","path":"sprites/spr_efeito_duplopulo/spr_efeito_duplopulo.yy",},"order":0,},
     {"id":{"name":"obj_efeito_duplopulo","path":"objects/obj_efeito_duplopulo/obj_efeito_duplopulo.yy",},"order":8,},
     {"id":{"name":"spr_inimigo_generico","path":"sprites/spr_inimigo_generico/spr_inimigo_generico.yy",},"order":4,},

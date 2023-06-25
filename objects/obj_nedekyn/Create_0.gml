@@ -1,5 +1,6 @@
 //mexe e dash
-
+andandospd=0
+podeandandospd=0
 pulandospd=0
 spid=4.0
 spid2=4.0
