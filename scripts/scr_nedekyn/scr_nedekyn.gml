@@ -177,6 +177,7 @@ function scr_nedekyn_wall_jump(){
 		if pulandospd >= 1{
 			sprite_index=spr_nedekyn_wall
 		pulandospd=3
+		
 		}
 		
 		if pular=1{
