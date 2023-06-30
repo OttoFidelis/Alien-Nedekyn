@@ -1,5 +1,4 @@
 # Nedekyn
-jogo do Nedekyn
 Otto -- Aqui está o que você precisa saber para fazer o jogo do Nedekyn 
 Primeiro, aprenda a compreender o códigos que eu coloquei, qualquer dúvida, pergunte no zap; 
 Segundo, desperte a sua falta de sanidadde mental para entender os códigos com variáveis com nomes bizarros; 
