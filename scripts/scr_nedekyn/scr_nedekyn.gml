@@ -180,25 +180,3 @@ x+=atacspdas
 	}
 	
 }
-function scr_nedekyn_wall_jump(){
-	var parede = place_meeting(x-1,y,obj_block)|| place_meeting(x+1,y,obj_block)
-// Otto -- se o Nedekyn não estiver no chão e ele encostar na parede, ele gruda na parede
-	if (parede and !place_meeting(x,y+1,obj_block)){
-		pulos=0
-		podeandandospd=2
-		if pulandospd >= 1{
-			sprite_index=spr_nedekyn_wall
-		pulandospd=3
-		
-		}
-		// Otto -- se o Nedekyn pulo enquanto ele gruda na parede, ele vai para a direção oposta
-		if pular=1{
-			
-			andandospd-=5 * image_xscale
-			podeandandospd=5
-			pulandospd=-10
-		}
-		
-	}
-	else jumpframes=8 spid=spid2
-}
