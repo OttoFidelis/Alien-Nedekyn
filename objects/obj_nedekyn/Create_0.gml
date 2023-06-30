@@ -5,7 +5,7 @@ andandospd=0
 podeandandospd=0
 //velocidade vertical
 pulandospd=0
-velocidade horizontal máxima
+//velocidade horizontal máxima
 spid=4.0
 spid2=4.0
 //velocidade do dash
