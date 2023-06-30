@@ -11,7 +11,7 @@ V -- atacar;
 SPACE -- pular;
 scr -- script;
 spr -- sprite;        
-modelo dos nomes  --identificação_nome do indivíduo_ação;                      
+modelo dos nomes de sprites e scripts -- identificação_nome do indivíduo_ação;                      
 exemplo de nome de script -- scr_nedekyn_peidando;
 exemplo de nome de sprite -- spr_nedekyn_peidando;
 Use nomes claros e identificáveis para as variáveis;
