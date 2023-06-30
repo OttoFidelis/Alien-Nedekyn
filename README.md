@@ -16,5 +16,5 @@ exemplo de nome de script -- scr_nedekyn_peidando;
 exemplo de nome de sprite -- spr_nedekyn_peidando;
 Use nomes claros e identificáveis para as variáveis;
 Sempre descreva os códigos com comentários para facilitar a compreenção e coloque seu nome no comentário;
-Nos commits, coloque o seu nome e faça uma descrição clara do que voc~e fez no jogo;
+Nos commits, coloque o seu nome e faça uma descrição clara do que você fez no jogo;
 Se você entrar no arquivo do projeto, sempre dê git pull se alguém deu commit antes de você se você já tiver os arquivos no seu computador 
