@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_efeito_duplopulo",
-  "spriteId": {
-    "name": "spr_efeito_duplopulo",
-    "path": "sprites/spr_efeito_duplopulo/spr_efeito_duplopulo.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
