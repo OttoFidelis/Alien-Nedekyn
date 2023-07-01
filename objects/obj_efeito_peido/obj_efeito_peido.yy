@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_efeito_peido",
-  "spriteId": {
-    "name": "spr_efeito_peido",
-    "path": "sprites/spr_efeito_peido/spr_efeito_peido.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

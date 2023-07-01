@@ -31,7 +31,7 @@ if pulandospd = 0{
 	
 	}
 }
-
+    
 	draw_text(x+120,y-80,"pulos: "+ string(pulos))
-
+    
 }

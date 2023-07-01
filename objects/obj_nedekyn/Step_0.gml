@@ -35,7 +35,7 @@ if agachado=1{
 }
 //se o Nedekyn estiver parado por mais de 10 segundos, ele muda de animação
 if alarm[1] = 0{
-  
+    instance_create_layer(x,y,"Instances",obj_efeito_peido)
 }
 //se o Nedekyn está fazendo dash, ele não pode mudar de animação depois de 10 segundos
 if alarm[3]>0{

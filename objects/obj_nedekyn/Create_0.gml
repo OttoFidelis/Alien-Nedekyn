@@ -29,7 +29,7 @@ esta = scr_nedekyn_andando
 //quantos pulos o Nedekyn pode fazer
 jumps=2
 //duração do pulo enquanto aperta o botão de pular
-jumpframes=5
+jumpframes=6
 jumptime=0
 //luta, vida e dano
 //tamanho da vida

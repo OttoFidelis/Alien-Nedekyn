@@ -14,14 +14,8 @@ if place_meeting(x+andandospd,y,obj_block){
 	}
 	andandospd=0
 }
-//caso o mexe ficar igual a 2 ou -2, ele divide o andandospd por 2 ( só pra garantir)
-if mexe=2{
-	andandospd=andandospd/2
-}
-else if mexe=-2{
-	andandospd=andandospd/2
-}
-else if andandospd = mexe*spid
+
+
 //Otto -- esse código representa a direção que o Nedekyn está
 if place_meeting(x,y+1,obj_block){
 
@@ -29,7 +23,7 @@ if andandospd!=0{
 	sprite_index = spr_nedekyn_run
 
 }
-if andandospd==0{
+if andandospd=0{
     sprite_index = spr_nedekyn_idle
 }
 
