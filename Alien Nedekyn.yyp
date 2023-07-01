@@ -5,6 +5,8 @@
   "resources": [
     {"id":{"name":"obj_controle","path":"objects/obj_controle/obj_controle.yy",},"order":4,},
     {"id":{"name":"spr_nedekyn_dance","path":"sprites/spr_nedekyn_dance/spr_nedekyn_dance.yy",},"order":5,},
+    {"id":{"name":"obj_efeito_peido","path":"objects/obj_efeito_peido/obj_efeito_peido.yy",},"order":9,},
+    {"id":{"name":"spr_efeito_peido","path":"sprites/spr_efeito_peido/spr_efeito_peido.yy",},"order":1,},
     {"id":{"name":"obj_block2","path":"objects/obj_block2/obj_block2.yy",},"order":6,},
     {"id":{"name":"spr_nedekyn_idle","path":"sprites/spr_nedekyn_idle/spr_nedekyn_idle.yy",},"order":1,},
     {"id":{"name":"spr_nedekyn_dash","path":"sprites/spr_nedekyn_dash/spr_nedekyn_dash.yy",},"order":6,},

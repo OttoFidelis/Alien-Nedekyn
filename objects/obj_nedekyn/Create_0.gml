@@ -19,17 +19,17 @@ atacspd=2
 atacspd2=2
 //pulo
 //gravidade
-gravid=0.5
-gravid2=0.5
+gravid=0.45
+gravid2=0.45
 //velocidade máxima do pulo
-impulsopulospeed=-8
-impulsopulospeed2=-8
+impulsopulospeed=-7
+impulsopulospeed2=-7
 //estado
 esta = scr_nedekyn_andando
 //quantos pulos o Nedekyn pode fazer
 jumps=2
 //duração do pulo enquanto aperta o botão de pular
-jumpframes=8
+jumpframes=5
 jumptime=0
 //luta, vida e dano
 //tamanho da vida

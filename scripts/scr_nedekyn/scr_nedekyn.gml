@@ -3,7 +3,7 @@
 function scr_nedekyn_andando(){
 	//Otto -- mexe representa os botões que fazem o Nedekyn andar 
 	
-	mexe =  - keyboard_check(ord("A")) +keyboard_check(ord("D")) 
+	mexe =  - keyboard_check(ord("A"))  +keyboard_check(ord("D"))  
 //podeandandospd é a permissão que o nedekyn tem para pular, se for 0, o nedekyn anda 
 podeandandospd=lerp(podeandandospd,0,0.5)	
 if podeandandospd<=0 andandospd=mexe*spid
@@ -14,6 +14,14 @@ if place_meeting(x+andandospd,y,obj_block){
 	}
 	andandospd=0
 }
+//caso o mexe ficar igual a 2 ou -2, ele divide o andandospd por 2 ( só pra garantir)
+if mexe=2{
+	andandospd=andandospd/2
+}
+else if mexe=-2{
+	andandospd=andandospd/2
+}
+else if andandospd = mexe*spid
 //Otto -- esse código representa a direção que o Nedekyn está
 if place_meeting(x,y+1,obj_block){
 
@@ -65,7 +73,7 @@ function scr_nedekyn_pulando(){
 y+=pulandospd
 //Otto -- se o Nedekyn faz pulo duplo, aparece a fumacinha em baixo dele
 if pular =1{
-			if pulos =1{
+			if pulos =-1{
 				instance_create_layer(x,y-10,"Instances",obj_efeito_duplopulo)
 			}
 		}
@@ -87,13 +95,19 @@ if pular = 1 && pulos>0{
 		pulos-=1
 		jumptime=jumpframes
 		}
+		
 		if pulos >=1{
 		if !pularhold {jumptime=0}
 		if jumptime >0{
 			pulandospd=impulsopulospeed
 			jumptime--
 		}
-		
+		}
+	if pulos =0{
+		if jumptime >0{
+			pulandospd=impulsopulospeed
+			jumptime--
+		}
 		}
 //Otto -- se o Nedekyn não está no chão, ele exibe a animação de pulo
  
