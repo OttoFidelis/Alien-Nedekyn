@@ -73,7 +73,7 @@ function scr_nedekyn_pulando(){
 y+=pulandospd
 //Otto -- se o Nedekyn faz pulo duplo, aparece a fumacinha em baixo dele
 if pular =1{
-			if pulos =-1{
+			if pulos =1{
 				instance_create_layer(x,y-10,"Instances",obj_efeito_duplopulo)
 			}
 		}
