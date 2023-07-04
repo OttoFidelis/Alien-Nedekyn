@@ -3,10 +3,13 @@
 function scr_nedekyn_andando(){
 	//Otto -- mexe representa os botões que fazem o Nedekyn andar 
 	
-	mexe =  - keyboard_check(ord("A"))  +keyboard_check(ord("D"))  
+	mexe =  - keyboard_check(ord("A")) - keyboard_check(vk_left) +keyboard_check(ord("D")) +keyboard_check(vk_right) 
+	if mexe>0 move =1
+	if mexe<0 move =-1
+	if mexe = 0 move = 0
 //podeandandospd é a permissão que o nedekyn tem para pular, se for 0, o nedekyn anda 
 podeandandospd=lerp(podeandandospd,0,0.5)	
-if podeandandospd<=0 andandospd=mexe*spid
+if podeandandospd<=0 andandospd=move*spid
 //se o Nedekyn encosta na parede enquando anda, o Nedekyn para
 if place_meeting(x+andandospd,y,obj_block){
 	while !place_meeting(x+sign(andandospd),y,obj_block){
@@ -126,13 +129,13 @@ else if pulandospd>0{
 //agachando
 function scr_nedekyn_agachando(){
 	
-agachado = +keyboard_check(ord("S"))
+agachado = keyboard_check(ord("S"))|| keyboard_check(vk_down)
 //Otto -- se a variável gacha for 0, o Nedekyn não agacha
 if gacha=0{
 		agachado=0
 	}
 //Otto -- se o jogador aperta o botão de abaixar, o nedekyn agacha e ele para de andar
-if agachado =1{
+if agachado >0{
 	sprite_index=spr_nedekyn_down
 	spid=0
 	mexe=0
@@ -187,4 +190,8 @@ x+=atacspdas
 		esta = scr_nedekyn_andando	
 	}
 	
+}
+
+function scr_nedekyn_dash(){
+	dash = keyboard_check_pressed(ord("B"))
 }
