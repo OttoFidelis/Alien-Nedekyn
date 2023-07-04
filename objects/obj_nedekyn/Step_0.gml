@@ -4,7 +4,7 @@ script_execute(esta)
 //pulo
 scr_nedekyn_pulando()
 
-//agachar
+//agacha
 scr_nedekyn_agachando()
 
 // se o Nedekyn toma dano, ele dá a piscadinha 
