@@ -18,6 +18,7 @@ if place_meeting(x+andandospd,y,obj_block){
 	andandospd=0
 }
 
+
 //Otto -- esse código representa a direção que o Nedekyn está
 if place_meeting(x,y+1,obj_block){
 

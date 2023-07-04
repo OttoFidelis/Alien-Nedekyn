@@ -7,7 +7,7 @@ scr_nedekyn_pulando()
 //agacha
 scr_nedekyn_agachando()
 
-// se o Nedekyn toma dano, ele dá a piscadinha 
+// se o Nedekyn toma dano ele dá a piscadinha 
 if alarm[0] > 0 && sprite_index != spr_nedekyn_dash{
 	if image_alpha>=1{
 		piscadinha = -0.5
