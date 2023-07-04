@@ -46,3 +46,5 @@ if alarm[3]>0{
 if pular=1{
 	alarm[1]=600
 }
+
+
