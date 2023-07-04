@@ -3,7 +3,7 @@
 function scr_nedekyn_andando(){
 	//Otto -- mexe representa os botões que fazem o Nedekyn andar 
 	
-	mexe =  - keyboard_check(ord("A")) - keyboard_check(vk_left) +keyboard_check(ord("D")) +keyboard_check(vk_right) 
+	mexe =  - keyboard_check(ord("A")) - keyboard_check(vk_left) - gamepad_button_check(0,gp_padl) +keyboard_check(ord("D")) +keyboard_check(vk_right)+ gamepad_button_check(0,gp_padr) 
 	if mexe>0 move =1
 	if mexe<0 move =-1
 	if mexe = 0 move = 0
@@ -41,7 +41,7 @@ if andandospd<0{
 x+=andandospd
 //Otto -- colisão do ataque físico e mudaança de esta para atacando
 if place_meeting(x,y+1,obj_block){
-if keyboard_check_pressed(ord("V")){
+if keyboard_check_pressed(ord("V"))||gamepad_button_check_pressed(0,gp_face3){
 	esta = scr_nedekyn_atacando
 	image_index=0
 //Otto -- hitbox que causa dano no inimigo
@@ -58,8 +58,8 @@ if keyboard_check_pressed(ord("V")){
 
 //pulo
 function scr_nedekyn_pulando(){
-	pular = +keyboard_check_pressed(vk_space)
-	pularhold = +keyboard_check(vk_space)
+	pular = keyboard_check_pressed(vk_space)||gamepad_button_check_pressed(0,gp_face1)
+	pularhold = keyboard_check(vk_space)||gamepad_button_check(0,gp_face1)
 	//Otto -- e o Nedekyn encosta no chão, ele para de cair
 	if place_meeting(x,y+pulandospd,obj_block){
 	while !place_meeting(x,y+sign(pulandospd),obj_block){
@@ -129,7 +129,7 @@ else if pulandospd>0{
 //agachando
 function scr_nedekyn_agachando(){
 	
-agachado = keyboard_check(ord("S"))|| keyboard_check(vk_down)
+agachado = keyboard_check(ord("S"))|| keyboard_check(vk_down)|| gamepad_button_check(0,gp_padd)
 //Otto -- se a variável gacha for 0, o Nedekyn não agacha
 if gacha=0{
 		agachado=0
