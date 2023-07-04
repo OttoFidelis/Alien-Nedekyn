@@ -18,12 +18,6 @@ if place_meeting(x+andandospd,y,obj_block){
 	andandospd=0
 }
 
-/*som do passo (A ideia é ter duas ou mais variações de passo.)
-(Bugou e agora não funciona mais n sei pq ;-;) (Mudar o som para não tomar copy right)*/
-var som_passo = choose(snd_passo, snd_passo)
-if (mexe < 0) {
-	audio_play_sound(som_passo,2,false)
-}
 
 //Otto -- esse código representa a direção que o Nedekyn está
 if place_meeting(x,y+1,obj_block){
