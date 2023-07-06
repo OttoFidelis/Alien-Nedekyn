@@ -14,7 +14,7 @@ desaceleracao=0.4
 coyotetime=0
 coyotetimemax=10
 pulos=2
-
+podepular=true
 podemexer=0
 x_scale=1
 y_scale=1

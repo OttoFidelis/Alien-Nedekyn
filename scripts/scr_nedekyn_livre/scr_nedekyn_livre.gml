@@ -27,10 +27,12 @@ if horizontalspd!=0{
 
 var chao = place_meeting(x,y+1,obj_block)
 var parede = place_meeting(x+1,y,obj_block)||place_meeting(x-1,y,obj_block)
-
+var parede_positiva = place_meeting(x+23,y,obj_block)
+var parede_negativa = place_meeting(x-23,y,obj_block)
 
 if chao{
 	coyotetime=coyotetimemax
+	podepular=true
 }
 else{
 	coyotetime --
@@ -44,32 +46,15 @@ else{
 	}
 }
 }
-
-if chao{
-	pulos=2
-}
-if !chao && pulos=2 && coyotetime=0{
-	pulos=1
-}
-if key_jump {
-	if pulos = 1{
-		instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
-	}
-}
-
-if key_jump and coyotetime>0 and pulos>0{
+if key_jump and coyotetime>0 and podepular = true {
+	podepular=false
 	coyotetime=0
 	verticalspd=0
 	verticalspd-=alturapulo
 }
-if coyotetime>0 && !parede{
-	pulos=2
-}
-if key_jump and pulos>0{
-	verticalspd=0
-	pulos--
-	verticalspd-=alturapulo
-}
 
+
+if parede_positiva && key_left podepular=true
+if parede_negativa && key_right podepular=true
 
 }
