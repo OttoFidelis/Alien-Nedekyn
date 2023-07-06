@@ -5,6 +5,8 @@ andandospd=0
 podeandandospd=0
 //velocidade vertical
 pulandospd=0
+coyotetime=10
+coyotetime2=0
 //velocidade horizontal máxima
 spid=4.0
 spid2=4.0
@@ -45,3 +47,4 @@ alarm[4] = 0
 //Agachamento
 //permissão para agachar
 gacha=1
+	
