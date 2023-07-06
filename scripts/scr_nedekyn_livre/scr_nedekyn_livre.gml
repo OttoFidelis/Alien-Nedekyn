@@ -27,8 +27,8 @@ if horizontalspd!=0{
 
 var chao = place_meeting(x,y+1,obj_block)
 var parede = place_meeting(x+1,y,obj_block)||place_meeting(x-1,y,obj_block)
-var parede_positiva = place_meeting(x+23,y,obj_block)
-var parede_negativa = place_meeting(x-23,y,obj_block)
+var parede_positiva = place_meeting(x+1,y,obj_block)
+var parede_negativa = place_meeting(x-1,y,obj_block)
 
 if chao{
 	coyotetime=coyotetimemax
@@ -46,15 +46,30 @@ else{
 	}
 }
 }
-if key_jump and coyotetime>0 and podepular = true {
+if coyotetime>0 and podepular = true {
+if key_jump{
+if parede_positiva && key_left{
+podepular=false
+	coyotetime=0
+	verticalspd=0
+	verticalspd-=alturapulo
+}
+else if parede_negativa && key_right {
+podepular=false
+	coyotetime=0
+	verticalspd=0
+	verticalspd-=alturapulo
+}
+else{
 	podepular=false
 	coyotetime=0
 	verticalspd=0
 	verticalspd-=alturapulo
 }
+	}
+}
 
 
-if parede_positiva && key_left podepular=true
-if parede_negativa && key_right podepular=true
+
 
 }
