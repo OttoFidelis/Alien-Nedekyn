@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-camera_largura = camera_get_view_width(view_camera[0]);
-camera_altura = camera_get_view_height(view_camera[0]);
+global.view_target = obj_nedekyn
+window_set_size(VIEW_WIDTH*VIEW_SCALE,VIEW_HEIGHT*VIEW_SCALE)
+surface_resize(application_surface,VIEW_WIDTH*VIEW_SCALE,VIEW_HEIGHT*VIEW_SCALE)
+alarm[0]=1
 
