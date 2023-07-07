@@ -18,21 +18,20 @@ else{
 	sprite_index=spr_nedekyn_idle
 	velocidade=aprroach(velocidade,0,desaceleracao)
 }
-
-horizontalspd = lengthdir_x(velocidade,direcao)
+podemexer =lerp(podemexer,0,0.5)
+if podemexer<=0 horizontalspd = lengthdir_x(velocidade,direcao)
 
 if horizontalspd!=0{
+	
 	x_scale = sign(horizontalspd)
 }
 
 var chao = place_meeting(x,y+1,obj_block)
 var parede = place_meeting(x+1,y,obj_block)||place_meeting(x-1,y,obj_block)
-var parede_positiva = place_meeting(x+1,y,obj_block)
-var parede_negativa = place_meeting(x-1,y,obj_block)
+
 
 if chao{
 	coyotetime=coyotetimemax
-	podepular=true
 }
 else{
 	coyotetime --
@@ -46,30 +45,56 @@ else{
 	}
 }
 }
-if coyotetime>0 and podepular = true {
-if key_jump{
-if parede_positiva && key_left{
-podepular=false
-	coyotetime=0
-	verticalspd=0
-	verticalspd-=alturapulo
+
+if chao{
+	pulos=2
 }
-else if parede_negativa && key_right {
-podepular=false
-	coyotetime=0
-	verticalspd=0
-	verticalspd-=alturapulo
+if !chao && pulos=2 && coyotetime=0{
+	pulos=1
 }
-else{
-	podepular=false
-	coyotetime=0
-	verticalspd=0
-	verticalspd-=alturapulo
-}
+if key_jump && !parede{
+	if pulos = 1{
+		instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
 	}
 }
 
-
-
+if key_jump and coyotetime>0 and pulos>0{
+	coyotetime=0
+	verticalspd=0
+	verticalspd-=alturapulo
+}
+if coyotetime>0 && !parede{
+	pulos=2
+}
+if key_jump and pulos>0{
+	verticalspd=0
+	pulos--
+	verticalspd-=alturapulo
+}
+if parede and !chao {
+	
+	if verticalspd>1{
+	sprite_index=spr_nedekyn_wall
+	pulos=1
+	verticalspd=2
+	}
+		if place_meeting(x+1,y,obj_block){
+		x_scale=1
+		}
+		if place_meeting(x-1,y,obj_block){
+		x_scale=-1
+		}
+	if key_jump{
+		if move=0||move!=0{
+		podemexer=2
+		pulos=0
+		coyotetime=0
+		verticalspd=0
+		verticalspd=-alturapulo
+		horizontalspd=-3*x_scale
+		}
+	}
+	
+}
 
 }
