@@ -74,10 +74,11 @@ if key_jump and pulos>0{
 if parede and !chao and move=x_scale{
 	
 	if verticalspd>2{
-	pulos=2
+	pulos=0
 	verticalspd=2
 	sprite_index=spr_nedekyn_wall
 	}
+
 	horizontalspd=0
 		if place_meeting(x+1,y,obj_block){
 		x_scale=1
