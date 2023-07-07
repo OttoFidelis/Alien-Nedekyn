@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 alturapulo=8
-verticalspdmin=-7
-verticalspdmax=7
+verticalspdmin=-7.337
+verticalspdmax=7.337
 verticalspd=0
 gravid=0.38
 horizontalspd=0
