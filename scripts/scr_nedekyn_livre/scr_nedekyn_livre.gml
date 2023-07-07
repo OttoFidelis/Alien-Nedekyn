@@ -86,7 +86,7 @@ if parede and !chao and move=x_scale{
 		x_scale=-1
 		}
 	if key_jump{
-		if move=0||move!=0{
+		if move=0||move=x_scale*-1{
 		podemexer=2
 		pulos=0
 		coyotetime=0
