@@ -52,7 +52,7 @@ if chao{
 if !chao && pulos=2 && coyotetime=0{
 	pulos=1
 }
-if key_jump && !parede{
+if key_jump{
 	if pulos = 1{
 		instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
 	}
@@ -71,10 +71,10 @@ if key_jump and pulos>0{
 	pulos--
 	verticalspd-=alturapulo
 }
-if parede and !chao {
+if parede and !chao and move=x_scale{
 	
 	if verticalspd>2{
-	pulos=1
+	pulos=2
 	verticalspd=2
 	sprite_index=spr_nedekyn_wall
 	}
