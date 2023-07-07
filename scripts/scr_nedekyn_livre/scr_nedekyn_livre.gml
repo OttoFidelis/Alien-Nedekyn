@@ -72,7 +72,7 @@ if key_jump and pulos>0{
 	verticalspd-=alturapulo
 }
 if place_meeting(x-1,y,obj_block) and !chao and move=x_scale{
-	
+	pulos=0
 	if verticalspd>2{
 	pulos=0
 	verticalspd=2
@@ -96,7 +96,7 @@ if place_meeting(x-1,y,obj_block) and !chao and move=x_scale{
 	
 }
 if place_meeting(x+1,y,obj_block) and !chao and move=-x_scale{
-	
+	pulos=0
 	if verticalspd>2{
 	pulos=0
 	verticalspd=2
