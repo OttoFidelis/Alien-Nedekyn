@@ -90,7 +90,7 @@ if place_meeting(x-1,y,obj_block) and !chao and move=x_scale{
 		coyotetime=0
 		verticalspd=0
 		verticalspd=-alturapulo
-		horizontalspd=-3*x_scale
+		horizontalspd=-5*x_scale
 		}
 	}
 	
@@ -114,7 +114,7 @@ if place_meeting(x+1,y,obj_block) and !chao and move=-x_scale{
 		coyotetime=0
 		verticalspd=0
 		verticalspd=-alturapulo
-		horizontalspd=-3*x_scale
+		horizontalspd=-5*x_scale
 		}
 	}
 	
