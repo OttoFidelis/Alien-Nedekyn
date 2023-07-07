@@ -78,6 +78,7 @@ if parede and !chao {
 	pulos=1
 	verticalspd=2
 	}
+	horizontalspd=0
 		if place_meeting(x+1,y,obj_block){
 		x_scale=1
 		}
