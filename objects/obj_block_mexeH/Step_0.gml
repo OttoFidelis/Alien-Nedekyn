@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 horizontalspd=direcao*velocidade
 
 if place_meeting(x+sign(horizontalspd),y,obj_block){
