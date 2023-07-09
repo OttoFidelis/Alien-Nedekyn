@@ -3,10 +3,12 @@
 
 horizontalspd=direcao*velocidade
 
-if place_meeting(x+sign(horizontalspd),y,obj_block){
+if place_meeting(x+sign(horizontalspd),y,obj_colisao_blockmexe){
 	direcao *=-1
 }
 x+=horizontalspd
+
+	sprite_index=spr_block_mexe
 var c = place_meeting(x+sign(horizontalspd),y,obj_nedekyn) or place_meeting(x,y-1,obj_nedekyn)
 if c{
 	with obj_nedekyn{
