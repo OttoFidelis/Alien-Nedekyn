@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_fx",
-  "spriteId": {
-    "name": "spr_shockwave_distortion_normals_64",
-    "path": "sprites/spr_shockwave_distortion_normals_64/spr_shockwave_distortion_normals_64.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
