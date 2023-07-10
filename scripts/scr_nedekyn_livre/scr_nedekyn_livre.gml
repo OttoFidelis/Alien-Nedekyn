@@ -151,7 +151,7 @@ if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
 	verticalspdmin=-30
 	verticalspdmax=30
 	instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
-	instance_create_layer(x,y,"Instances",obj_fx)
+
 }
 }
 function scr_nedekyn_smash(){

@@ -19,7 +19,6 @@
     {"id":{"name":"spr_colisao","path":"sprites/spr_colisao/spr_colisao.yy",},"order":3,},
     {"id":{"name":"spr_nedekyn_jump1","path":"sprites/spr_nedekyn_jump1/spr_nedekyn_jump1.yy",},"order":11,},
     {"id":{"name":"crv_vibrate_pan_right","path":"animcurves/crv_vibrate_pan_right/crv_vibrate_pan_right.yy",},"order":4,},
-    {"id":{"name":"obj_fx","path":"objects/obj_fx/obj_fx.yy",},"order":11,},
     {"id":{"name":"spr_nedekyn_atacando2","path":"sprites/spr_nedekyn_atacando2/spr_nedekyn_atacando2.yy",},"order":10,},
     {"id":{"name":"spr_block_mexe","path":"sprites/spr_block_mexe/spr_block_mexe.yy",},"order":11,},
     {"id":{"name":"spr_nedekyn_run","path":"sprites/spr_nedekyn_run/spr_nedekyn_run.yy",},"order":3,},
