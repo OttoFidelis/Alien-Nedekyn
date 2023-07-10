@@ -63,6 +63,9 @@ if !chao && pulos=2 && coyotetime=0{
 }
 if key_jump{
 	if pulos = 1{
+		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
+		vibra.strengh_left = 3
+		vibra.strengh_right = 3
 		instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
 	}
 }
@@ -83,6 +86,10 @@ if key_jump and pulos>0{
 if place_meeting(x-1,y,obj_block) and !chao and move=x_scale and coyotetime<=0{
 	pulos=0
 	if verticalspd>2{
+		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
+		vibra.strengh_left = 2
+		vibra.strengh_right = 2
+	scr_camera_shake(1)
 	pulos=0
 	verticalspd=2
 	sprite_index=spr_nedekyn_wall
@@ -95,6 +102,7 @@ if place_meeting(x-1,y,obj_block) and !chao and move=x_scale and coyotetime<=0{
 		
 	if key_jump{
 		if move=0||move=1{
+		scr_camera_shake(4)
 		podemexer=2
 		pulos=0
 		coyotetime=0
@@ -108,6 +116,10 @@ if place_meeting(x-1,y,obj_block) and !chao and move=x_scale and coyotetime<=0{
 if place_meeting(x+1,y,obj_block) and !chao and move=-x_scale and coyotetime<=0{
 	pulos=0
 	if verticalspd>2{
+		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
+		vibra.strengh_left = 2
+		vibra.strengh_right = 2
+	scr_camera_shake(1)
 	pulos=0
 	verticalspd=2
 	sprite_index=spr_nedekyn_wall
@@ -119,6 +131,7 @@ if place_meeting(x+1,y,obj_block) and !chao and move=-x_scale and coyotetime<=0{
 		}
 	if key_jump{
 		if move=0||move!=0{
+		scr_camera_shake(4)
 		podemexer=2
 		pulos=0
 		coyotetime=0
@@ -156,6 +169,10 @@ function scr_nedekyn_smash(){
 		image_index=image_number-1
 	}
 	if place_meeting(x,y+1,obj_block){
+	    scr_camera_shake(6)
+		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
+		vibra.strengh_left = 10
+		vibra.strengh_right = 10
 		sprite_index=spr_nedekyn_down
 		if image_index>=image_number-1{
 			estado=scr_nedekyn_livre
