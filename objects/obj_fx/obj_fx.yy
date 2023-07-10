@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_fx",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_shockwave_distortion_normals_64",
+    "path": "sprites/spr_shockwave_distortion_normals_64/spr_shockwave_distortion_normals_64.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,6 +27,7 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":77,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
