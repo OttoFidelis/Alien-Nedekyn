@@ -84,7 +84,7 @@ if key_jump and pulos>0{
 	pulos--
 	verticalspd-=alturapulo
 }
-if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and verticalspd>-2{
+if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and move=x_scale {
 	pulos=0
 	if verticalspd>2{
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
@@ -114,7 +114,7 @@ if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and verticalspd>-2
 	}
 	
 }
-if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and verticalspd>-2{
+if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and move =-x_scale{
 	pulos=0
 	if verticalspd>2{
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
