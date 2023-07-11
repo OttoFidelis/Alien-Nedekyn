@@ -30,7 +30,14 @@ repeat(abs(verticalspd)){
 		y+=sign(verticalspd)
 	}
 }
-
-
+repeat(abs(aceleracao)){
+if place_meeting(x+sign(aceleracao),y,obj_block){
+		aceleracao=0
+		break
+	}
+	else{
+		x+=sign(aceleracao)
+	}
+}
 
 

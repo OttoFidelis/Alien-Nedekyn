@@ -15,12 +15,18 @@ var key_pause = keyboard_check_pressed(vk_escape)||gamepad_button_check_pressed(
 
 var move = key_right - key_left !=0
 var move_pressed = key_right_pressed - key_left_pressed !=0
-
+if !place_meeting(x,y+1,obj_block){
 verticalspd+=gravid
+}
 verticalspd=clamp(verticalspd,verticalspdmin,verticalspdmax)
 
-if move{
+if horizontalspd!=0{
 	sprite_index = spr_nedekyn_run
+	}
+	else{
+		sprite_index=spr_nedekyn_idle
+	}
+if move {
 	direcao=point_direction(0,0,key_right-key_left,0  )
 	velocidade=aprroach(velocidade,velocidademaxima,aceleracao)
 }
@@ -32,7 +38,6 @@ podemexer =lerp(podemexer,0,0.5)
 if podemexer<=0 horizontalspd = lengthdir_x(velocidade,direcao)
 
 if horizontalspd!=0{
-	
 	x_scale = sign(horizontalspd)
 }
 
