@@ -114,7 +114,7 @@ if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and move=x_scale {
 	}
 	
 }
-if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and move =-x_scale{
+if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and move =-x_scale {
 	pulos=0
 	if verticalspd>2{
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
