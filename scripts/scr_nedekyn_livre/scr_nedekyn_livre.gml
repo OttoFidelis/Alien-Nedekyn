@@ -222,6 +222,9 @@ function scr_nedekyn_smash(){
 		vibra.strengh_left = 10
 		vibra.strengh_right = 10
 		sprite_index=spr_nedekyn_down
+		if skin=1{
+		sprite_index=spr_nykeden_down
+	}
 		if image_index>=image_number-1{
 			estado=scr_nedekyn_livre
 			gravid=gravidnormal
