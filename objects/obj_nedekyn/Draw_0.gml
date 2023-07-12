@@ -19,6 +19,12 @@ if keyboard_check(ord("T")){
 	if verticalspd =0{
 	draw_text(x+120,y-80,"Estado aereo: "+"no chao")
 	}
+	if skin=0{
+	draw_text(x+120,y-60,"Skin: "+"Nedekyn")	
+	}
+	if skin=1{
+	draw_text(x+120,y-60,"Skin: "+"Nykeden")	
+	}
 }
 
 

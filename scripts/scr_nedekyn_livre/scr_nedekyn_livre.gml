@@ -12,7 +12,13 @@ var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_shoulderrb)
 var key_dodge = keyboard_check_pressed(ord("C"))||gamepad_button_check_pressed(0,gp_shoulderlb)
 var key_roll = keyboard_check_pressed(vk_shift)||gamepad_button_check_pressed(0,gp_face2)
 var key_pause = keyboard_check_pressed(vk_escape)||gamepad_button_check_pressed(0,gp_start)
-
+var key_skin = keyboard_check(ord("R"))
+if key_skin{
+	skin=1
+}
+else{
+	skin=0
+}
 var move = key_right - key_left !=0
 var move_pressed = key_right_pressed - key_left_pressed !=0
 if !place_meeting(x,y+1,obj_block){
@@ -22,9 +28,15 @@ verticalspd=clamp(verticalspd,verticalspdmin,verticalspdmax)
 
 if horizontalspd!=0{
 	sprite_index = spr_nedekyn_run
+	if skin=1{
+			sprite_index = spr_nykeden_run
+		}
 	}
 	else{
 		sprite_index=spr_nedekyn_idle
+		if skin=1{
+			sprite_index = spr_nykeden_idle
+		}
 	}
 if move{
 	direcao=point_direction(0,0,key_right-key_left,0  )
@@ -33,6 +45,9 @@ if move{
 
 else{
 	sprite_index=spr_nedekyn_idle
+	if skin=1{
+			sprite_index = spr_nykeden_idle
+		}
 	velocidade=aprroach(velocidade,0,desaceleracao)
 }
 
@@ -56,9 +71,18 @@ else{
 	coyotetime --
 	if verticalspd <0{
 	sprite_index=spr_nedekyn_jump1
+	if skin=1{
+		sprite_index=spr_nykeden_jump
+	}
 	}
 	if verticalspd>0{
 	sprite_index=spr_nedekyn_fall
+	if skin=1{
+		sprite_index=spr_nykeden_fall
+		if image_index>=image_number-1{
+		image_index=image_number-1
+	}
+	}
 	if image_index>=image_number-1{
 		image_index=image_number-1
 	}
@@ -103,6 +127,9 @@ if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and move=x_scale {
 	pulos=0
 	verticalspd=2
 	sprite_index=spr_nedekyn_wall
+	if skin=1{
+		sprite_index=spr_nykeden_wall
+	}
 	}
 
 	horizontalspd=0
@@ -133,6 +160,9 @@ if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and move =-x_scale
 	pulos=0
 	verticalspd=2
 	sprite_index=spr_nedekyn_wall
+	if skin=1{
+		sprite_index=spr_nykeden_wall
+	}
 	}
 
 	horizontalspd=0
@@ -168,10 +198,16 @@ function scr_nedekyn_smash(){
 	gravid = 0.4
 	if verticalspd<0{
 		sprite_index=spr_nedekyn_jump1
+		if skin=1{
+			sprite_index = spr_nykeden_jump
+		}
 	}
 	if verticalspd>0{
 		gravid=3
 		sprite_index=spr_nedekyn_fall
+		if skin=1{
+			sprite_index = spr_nykeden_fall
+		}
 	}
 	horizontalspd=0
 	verticalspd+=gravid

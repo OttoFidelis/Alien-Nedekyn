@@ -21,6 +21,7 @@ podepular=true
 podemexer=0
 x_scale=1
 y_scale=1
+skin=0
 
 estado = scr_nedekyn_livre
 
