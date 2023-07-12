@@ -26,16 +26,20 @@ if horizontalspd!=0{
 	else{
 		sprite_index=spr_nedekyn_idle
 	}
-if move {
+if move{
 	direcao=point_direction(0,0,key_right-key_left,0  )
 	velocidade=aprroach(velocidade,velocidademaxima,aceleracao)
 }
+
 else{
 	sprite_index=spr_nedekyn_idle
 	velocidade=aprroach(velocidade,0,desaceleracao)
 }
+
+
 podemexer =lerp(podemexer,0,0.5)
 if podemexer<=0 horizontalspd = lengthdir_x(velocidade,direcao)
+
 
 if horizontalspd!=0{
 	x_scale = sign(horizontalspd)
@@ -176,6 +180,7 @@ function scr_nedekyn_smash(){
 		image_index=image_number-1
 	}
 	if place_meeting(x,y+1,obj_block){
+		verticalspd=0
 	    scr_camera_shake(6)
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
 		vibra.strengh_left = 10
