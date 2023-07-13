@@ -185,6 +185,7 @@ if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and move =-x_scale
 
 }
 if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
+	podemexer=0.001
 	pulos=0
 	estado = scr_nedekyn_smash
 	verticalspd=-7
