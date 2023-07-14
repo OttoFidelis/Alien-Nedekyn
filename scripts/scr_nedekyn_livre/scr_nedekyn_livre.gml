@@ -4,6 +4,8 @@ var key_left = keyboard_check(vk_left)||keyboard_check(ord("A"))||gamepad_button
 var key_right = keyboard_check(vk_right)||keyboard_check(ord("D"))||gamepad_button_check(0,gp_padr)
 var key_left_pressed = keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A"))||gamepad_button_check_pressed(0,gp_padl)
 var key_right_pressed = keyboard_check_pressed(vk_right)||keyboard_check_pressed(ord("D"))||gamepad_button_check_pressed(0,gp_padr)
+var key_left_released = keyboard_check_released(vk_left)||keyboard_check_released(ord("A"))||gamepad_button_check_released(0,gp_padl)
+var key_right_released = keyboard_check_released(vk_right)||keyboard_check_released(ord("D"))||gamepad_button_check_released(0,gp_padr)
 var key_jump = keyboard_check_pressed(vk_space)||gamepad_button_check_pressed(0,gp_face1)
 var key_down = keyboard_check(vk_down)||keyboard_check(ord("S"))||gamepad_button_check(0,gp_padd)
 var key_up = keyboard_check(vk_up)||keyboard_check(ord("W"))||gamepad_button_check(0,gp_padu)
@@ -117,7 +119,7 @@ if key_jump and pulos>0{
 	pulos--
 	verticalspd-=alturapulo
 }
-if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and move=x_scale {
+if place_meeting(x-1,y,obj_block) and verticalspd>-2 and coyotetime<=0 {
 	pulos=0
 	if verticalspd>2{
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
@@ -133,10 +135,13 @@ if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and move=x_scale {
 	}
 
 	horizontalspd=0
-		if place_meeting(x-1,y,obj_block){
+		if place_meeting(x-1,y,obj_block) {
 		x_scale=-1
 		}
-		
+		else{
+			podemexer=1
+			horizontalspd=-1*x_scale
+		}
 	if key_jump{
 	
 		scr_camera_shake(4)
@@ -148,9 +153,14 @@ if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and move=x_scale {
 		horizontalspd=-5*x_scale
 		
 	}
-	
+	if key_down || key_roll{
+	podemexer=1
+	pulos=0
+	coyotetime=0
+	horizontalspd=-1*x_scale
 }
-if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and move =-x_scale {
+}
+if place_meeting(x+1,y,obj_block) and verticalspd>-2 and coyotetime<=0 {
 	pulos=0
 	if verticalspd>2{
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
@@ -169,6 +179,10 @@ if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and move =-x_scale
 		if place_meeting(x+1,y,obj_block){
 		x_scale=1
 		}
+		else{
+			podemexer=1
+			horizontalspd=-1*x_scale
+		}
 	if key_jump{
 		
 		scr_camera_shake(4)
@@ -180,8 +194,12 @@ if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and move =-x_scale
 		horizontalspd=-5*x_scale
 		
 	}
-	
-
+if key_down || key_roll{
+	podemexer=1
+	pulos=0
+	coyotetime=0
+	horizontalspd=-1*x_scale
+}
 
 }
 if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
