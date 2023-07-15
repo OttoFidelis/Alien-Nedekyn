@@ -1,5 +1,6 @@
 
 function scr_nedekyn_livre(){
+	// botões do jogo em variáveis locais
 var key_left = keyboard_check(vk_left)||keyboard_check(ord("A"))||gamepad_button_check(0,gp_padl)
 var key_right = keyboard_check(vk_right)||keyboard_check(ord("D"))||gamepad_button_check(0,gp_padr)
 var key_left_pressed = keyboard_check_pressed(vk_left)||keyboard_check_pressed(ord("A"))||gamepad_button_check_pressed(0,gp_padl)
@@ -14,19 +15,24 @@ var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_shoulderrb)
 var key_dodge = keyboard_check_pressed(ord("C"))||gamepad_button_check_pressed(0,gp_face2)
 var key_pause = keyboard_check_pressed(vk_escape)||gamepad_button_check_pressed(0,gp_start)
 var key_skin = keyboard_check(ord("R"))
+// código de configuração de skins
 if key_skin{
 	skin=1
 }
 else{
 	skin=0
 }
-var move = key_right - key_left !=0
-var move_pressed = key_right_pressed - key_left_pressed !=0
+// Código da corrida
+var move = key_right - key_left !=0 // valor de move baseado nas teclas de andar
+var move_pressed = key_right_pressed - key_left_pressed !=0 
+// código de gravidade
 if !place_meeting(x,y+1,obj_block){
 verticalspd+=gravid
 }
+// limitador de velocidade vertical
 verticalspd=clamp(verticalspd,verticalspdmin,verticalspdmax)
 
+// código dos sprites ( parado e correndo )
 if horizontalspd!=0{
 	sprite_index = spr_nedekyn_run
 	if skin=1{
@@ -39,11 +45,11 @@ if horizontalspd!=0{
 			sprite_index = spr_nykeden_idle
 		}
 	}
+	// configuração de velocidade de corrida
 if move{
 	direcao=point_direction(0,0,key_right-key_left,0  )
-	velocidade=aprroach(velocidade,velocidademaxima,aceleracao)
+	velocidade=aprroach(velocidade,velocidademaxima,aceleracao) // aprroach é tipo o lerp, só que melhor
 }
-
 else{
 	sprite_index=spr_nedekyn_idle
 	if skin=1{
@@ -52,36 +58,41 @@ else{
 	velocidade=aprroach(velocidade,0,desaceleracao)
 }
 
-
+// pode mexer define quando o Nedekyn pode andar, se for 0 ou negativo, o nedekyn pode andar
 podemexer =lerp(podemexer,0,0.5)
 if podemexer<=0 horizontalspd = lengthdir_x(velocidade,direcao)
 
-
+// x_scale é a direção que o Nedekyn olha
 if horizontalspd!=0{
 	x_scale = sign(horizontalspd)
 }
-
+// variáveis locais da colisão
 var chao = place_meeting(x,y+1,obj_block)
 var parede = place_meeting(x+1,y,obj_block)||place_meeting(x-1,y,obj_block)
 
-
+// código do coyote time
+/*
+coyote time é o tempo que o Nedekyn tem para pular depois que ele sai do chão sem pular
+o coyote time serve para melhorar a jogabilidade, facilitando o jogo
+*/
 if chao{
 	coyotetime=coyotetimemax
 }
+// se o Nedekyn não está no chão, o coyote time diminui 
 else{
 	coyotetime --
 	if verticalspd <0{
-	sprite_index=spr_nedekyn_jump1
+	sprite_index=spr_nedekyn_jump1 // sprite do Nedekyn pulando
 	if skin=1{
 		sprite_index=spr_nykeden_jump
 	}
 	}
 	if verticalspd>0{
-	sprite_index=spr_nedekyn_fall
+	sprite_index=spr_nedekyn_fall // sprite do Nedekyn caindo
 	if skin=1{
 		sprite_index=spr_nykeden_fall
 		if image_index>=image_number-1{
-		image_index=image_number-1
+		image_index=image_number-1 // código para a animação de queda não ficar em loop
 	}
 	}
 	if image_index>=image_number-1{
@@ -89,7 +100,7 @@ else{
 	}
 }
 }
-
+// pulos é o limites de pulos que o Nedekyn pode dar
 if chao{
 	pulos=2
 }
@@ -98,26 +109,30 @@ if !chao && pulos=2 && coyotetime=0{
 }
 if key_jump{
 	if pulos = 1{
-		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
+		var vibra = instance_create_depth(x,y,depth,obj_vibracao)// vibração de controle ( não sei se tá funcionando )
 		vibra.strengh_left = 3
 		vibra.strengh_right = 3
-		instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
+		instance_create_layer(x,y,"Instances",obj_efeito_duplopulo) // gera a fumacinha em baixo do Nedekyn quando ele faz o pulo duplo
 	}
 }
 
+// código que define quando o Nedekyn pode pular
 if key_jump and coyotetime>0 and pulos>0{
 	coyotetime=0
 	verticalspd=0
 	verticalspd-=alturapulo
 }
+// código que define quando pulos fica igual a 2
 if coyotetime>0 && !parede{
 	pulos=2
 }
+//código que define quando o limites de pulos diminui
 if key_jump and pulos>0{
 	verticalspd=0
 	pulos--
 	verticalspd-=alturapulo
 }
+// Aqui começa o código do wall jump
 if place_meeting(x-1,y,obj_block) and verticalspd>-2 and coyotetime<=0 {
 	pulos=0
 	if verticalspd>2{
@@ -201,6 +216,7 @@ if key_down {
 }
 
 }
+// Aqui termina o código do wall jump e começa o do smash
 if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
 	podemexer=0.001
 	pulos=0
@@ -211,13 +227,16 @@ if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
 	instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
 
 }
+//Aqui termina o código do smash e começa o da esquiva
 if place_meeting(x,y+2,obj_block) and key_dodge{
 	estado = scr_nedekyn_dodge
 }
+// Aqui termina o código da esquiva
 }
+// Função da esquiva
 function scr_nedekyn_dodge(){
 	sprite_index=spr_nedekyn_dodge
-	horizontalspd = 6*x_scale
+	horizontalspd = 6.5*x_scale
 	if image_index >= image_number-1{
 		estado = scr_nedekyn_livre
 	}
@@ -226,6 +245,7 @@ function scr_nedekyn_dodge(){
 	}
 	
 }
+// Função do smash
 function scr_nedekyn_smash(){
 	gravid = 0.4
 	if verticalspd<0{
