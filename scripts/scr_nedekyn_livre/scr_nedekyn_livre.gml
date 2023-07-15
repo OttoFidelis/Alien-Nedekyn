@@ -236,11 +236,7 @@ if place_meeting(x,y+2,obj_block) and key_dodge{
 }
 // Função da esquiva
 function scr_nedekyn_dodge(){
-	if image_index = 1 {
-	var instance = instance_create_layer(x,y,"Instances",obj_efeito_dodge)
-	instance.sprite_index = spr_nedekyn_dodge
-	instance.image_xscale = x_scale
-	}
+	
 	
 	sprite_index=spr_nedekyn_dodge
 	horizontalspd = 6.5*x_scale
