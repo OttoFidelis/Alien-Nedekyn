@@ -16,7 +16,7 @@
     {"id":{"name":"crv_vibrate_linear_fade_out","path":"animcurves/crv_vibrate_linear_fade_out/crv_vibrate_linear_fade_out.yy",},"order":2,},
     {"id":{"name":"spr_nykeden_run","path":"sprites/spr_nykeden_run/spr_nykeden_run.yy",},"order":0,},
     {"id":{"name":"spr_nedekyn_idle","path":"sprites/spr_nedekyn_idle/spr_nedekyn_idle.yy",},"order":1,},
-    {"id":{"name":"spr_nedekyn_dash","path":"sprites/spr_nedekyn_dash/spr_nedekyn_dash.yy",},"order":5,},
+    {"id":{"name":"spr_nedekyn_dodge","path":"sprites/spr_nedekyn_dodge/spr_nedekyn_dodge.yy",},"order":5,},
     {"id":{"name":"shd_shockwave","path":"shaders/shd_shockwave/shd_shockwave.yy",},"order":1,},
     {"id":{"name":"spr_nedekyn_down","path":"sprites/spr_nedekyn_down/spr_nedekyn_down.yy",},"order":6,},
     {"id":{"name":"spr_colisao","path":"sprites/spr_colisao/spr_colisao.yy",},"order":3,},

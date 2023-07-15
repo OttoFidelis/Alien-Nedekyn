@@ -11,8 +11,7 @@ var key_down = keyboard_check(vk_down)||keyboard_check(ord("S"))||gamepad_button
 var key_up = keyboard_check(vk_up)||keyboard_check(ord("W"))||gamepad_button_check(0,gp_padu)
 var key_attack = keyboard_check_pressed(ord("V"))||gamepad_button_check_pressed(0,gp_face4)
 var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_shoulderrb)
-var key_dodge = keyboard_check_pressed(ord("C"))||gamepad_button_check_pressed(0,gp_shoulderlb)
-var key_roll = keyboard_check_pressed(vk_shift)||gamepad_button_check_pressed(0,gp_face2)
+var key_dodge = keyboard_check_pressed(ord("C"))||gamepad_button_check_pressed(0,gp_face2)
 var key_pause = keyboard_check_pressed(vk_escape)||gamepad_button_check_pressed(0,gp_start)
 var key_skin = keyboard_check(ord("R"))
 if key_skin{
@@ -153,7 +152,7 @@ if place_meeting(x-1,y,obj_block) and verticalspd>-2 and coyotetime<=0 {
 		horizontalspd=-5*x_scale
 		
 	}
-	if key_down || key_roll{
+	if key_down {
 	podemexer=1
 	pulos=0
 	coyotetime=0
@@ -194,7 +193,7 @@ if place_meeting(x+1,y,obj_block) and verticalspd>-2 and coyotetime<=0 {
 		horizontalspd=-5*x_scale
 		
 	}
-if key_down || key_roll{
+if key_down {
 	podemexer=1
 	pulos=0
 	coyotetime=0
@@ -212,7 +211,9 @@ if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
 	instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
 
 }
+
 }
+
 function scr_nedekyn_smash(){
 	gravid = 0.4
 	if verticalspd<0{
