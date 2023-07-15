@@ -13,6 +13,9 @@ if keyboard_check(ord("T")){
 	if estado = scr_nedekyn_livre{
 	draw_text(x+120,y-100,"Estado: "+"livre")
 	}
+	if estado = scr_nedekyn_dodge{
+	draw_text(x+120,y-100,"Estado: "+"esquivando")
+	}
 	if estado = scr_nedekyn_smash{
 	draw_text(x+120,y-100,"Estado: "+"esmagando")
 	}

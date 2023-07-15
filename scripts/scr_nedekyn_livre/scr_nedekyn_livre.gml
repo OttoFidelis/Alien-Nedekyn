@@ -211,9 +211,21 @@ if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
 	instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
 
 }
-
+if place_meeting(x,y+2,obj_block) and key_dodge{
+	estado = scr_nedekyn_dodge
 }
-
+}
+function scr_nedekyn_dodge(){
+	sprite_index=spr_nedekyn_dodge
+	horizontalspd = 6*x_scale
+	if image_index >= image_number-1{
+		estado = scr_nedekyn_livre
+	}
+	if !place_meeting(x,y+3,obj_block){
+		estado = scr_nedekyn_livre
+	}
+	
+}
 function scr_nedekyn_smash(){
 	gravid = 0.4
 	if verticalspd<0{
