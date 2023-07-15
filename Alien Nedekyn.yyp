@@ -40,6 +40,7 @@
     {"id":{"name":"crv_vibrate_linear_fade_in","path":"animcurves/crv_vibrate_linear_fade_in/crv_vibrate_linear_fade_in.yy",},"order":1,},
     {"id":{"name":"spr_rampaL","path":"sprites/spr_rampaL/spr_rampaL.yy",},"order":10,},
     {"id":{"name":"obj_rampaR","path":"objects/obj_rampaR/obj_rampaR.yy",},"order":4,},
+    {"id":{"name":"obj_efeito_dodge","path":"objects/obj_efeito_dodge/obj_efeito_dodge.yy",},"order":14,},
     {"id":{"name":"spr_efeito_coracao","path":"sprites/spr_efeito_coracao/spr_efeito_coracao.yy",},"order":2,},
     {"id":{"name":"shd_add_normals","path":"shaders/shd_add_normals/shd_add_normals.yy",},"order":0,},
     {"id":{"name":"crv_vibrate_flat","path":"animcurves/crv_vibrate_flat/crv_vibrate_flat.yy",},"order":0,},
