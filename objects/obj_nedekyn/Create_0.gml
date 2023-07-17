@@ -22,7 +22,7 @@ podemexer=0
 x_scale=1
 y_scale=1
 skin=0
-pimpolho=0
-pimpolho_max = 30
+walltime=0
+walltime_max = 50
 estado = scr_nedekyn_livre
 

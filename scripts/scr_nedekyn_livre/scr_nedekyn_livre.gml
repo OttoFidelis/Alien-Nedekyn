@@ -134,8 +134,8 @@ if key_jump and pulos>0{
 }
 // Aqui começa o código do wall jump
 
-if place_meeting(x-1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and pimpolho>0{
-	pimpolho--
+if place_meeting(x-1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and walltime>0{
+	walltime--
 	pulos=0
 	if verticalspd>2||podemexer>0{
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
@@ -147,8 +147,8 @@ if place_meeting(x-1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and pimpo
 	
 	}
 		horizontalspd=0
-	if pimpolho>pimpolho_max/2 verticalspd=0
-	if pimpolho<pimpolho_max/2 verticalspd=2
+	if walltime>walltime_max/2 verticalspd=0
+	if walltime<walltime_max/2 verticalspd=2
 sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
@@ -172,7 +172,7 @@ sprite_index=spr_nedekyn_wall
 		horizontalspd=-7*x_scale
 		
 	}
-	if key_down || pimpolho<=0{
+	if key_down || walltime<=0{
 	podemexer=1
 	pulos=0
 	coyotetime=0
@@ -180,8 +180,8 @@ sprite_index=spr_nedekyn_wall
 }
 }
 
-else if place_meeting(x+1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and pimpolho>0{
-	pimpolho--
+else if place_meeting(x+1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and walltime>0{
+	walltime--
 	pulos=0
 	if verticalspd>2||podemexer>0{
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
@@ -193,8 +193,8 @@ else if place_meeting(x+1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and 
 	
 	}
 	horizontalspd=0
-	if pimpolho > pimpolho_max/2 verticalspd=0
-	if pimpolho < pimpolho_max/2 verticalspd=2
+	if walltime > walltime_max/2 verticalspd=0
+	if walltime < walltime_max/2 verticalspd=2
 	sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
@@ -217,7 +217,7 @@ else if place_meeting(x+1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and 
 		horizontalspd=-7*x_scale
 		
 	}
-if key_down || pimpolho<=0{
+if key_down || walltime<=0{
 	podemexer=1
 	pulos=0
 	coyotetime=0
@@ -226,7 +226,7 @@ if key_down || pimpolho<=0{
 
 }
 else{
-	pimpolho=pimpolho_max
+	walltime=walltime_max
 }
 
 // Aqui termina o código do wall jump e começa o do smash
@@ -249,9 +249,13 @@ if place_meeting(x,y+2,obj_block) and key_dodge and alarm[1]<=0{
 }
 // Função da esquiva
 function scr_nedekyn_dodge(){
-	
-	
+
+	if skin=0{
 	sprite_index=spr_nedekyn_dodge
+	}
+	if skin=1{
+	sprite_index=spr_nykeden_dodge
+	}
 	horizontalspd = 8.5*x_scale
 	if image_index >= image_number-1{
 		estado = scr_nedekyn_livre
