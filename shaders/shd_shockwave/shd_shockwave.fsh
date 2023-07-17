@@ -1,12 +1,11 @@
-//
-// Simple passthrough fragment shader
-//
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
+uniform sampler2D distortion_texture_page; // the name of the surface in the shader	
+
 void main()
 {
-       // find the offset colour for this location (this is where the magic happens) 
+    // find the offset colour for this location (this is where the magic happens) 
     vec2 distort_amount = vec2( (v_vColour * texture2D( distortion_texture_page, v_vTexcoord)).xy);
 
 	
@@ -22,4 +21,5 @@ void main()
 
 
     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord+distort_amount);
+
 }

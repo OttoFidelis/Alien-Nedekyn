@@ -4,6 +4,7 @@ draw_sprite_ext(sprite_index,image_index,x,y,x_scale,y_scale,0,c_white,1)
 if keyboard_check(ord("T")){
 	draw_text(x-120,y-80,"Hsp: "+string(horizontalspd))
 	draw_text(x-120,y-60,"Vsp: "+string(verticalspd))
+	draw_text(x-120,y-40,"Pimpolho: "+string(pimpolho))
 	if podemexer<=0{
 	draw_text(x+120,y-120,"Pode mexer: "+"sim")
 	}

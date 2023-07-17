@@ -57,7 +57,7 @@
     "name": "spr_nedekyn_run",
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 33.0,
+    "playbackSpeed": 35.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
