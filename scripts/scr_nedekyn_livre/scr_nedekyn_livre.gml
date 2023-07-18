@@ -132,9 +132,11 @@ if key_jump and pulos>0{
 	pulos--
 	verticalspd-=alturapulo
 }
-// Aqui começa o código do wall jump
+ 
 
-if place_meeting(x-1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and walltime>0{
+
+// Aqui começa o código do wall jump
+if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=x_scale{
 	walltime--
 	pulos=0
 	if verticalspd>2||podemexer>0{
@@ -148,7 +150,7 @@ if place_meeting(x-1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and wallt
 	}
 		horizontalspd=0
 	if walltime>walltime_max/2 verticalspd=0
-	if walltime<walltime_max/2 verticalspd=2
+	if walltime<walltime_max/5 verticalspd=2
 sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
@@ -180,7 +182,7 @@ sprite_index=spr_nedekyn_wall
 }
 }
 
-else if place_meeting(x+1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and walltime>0{
+else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=-x_scale{
 	walltime--
 	pulos=0
 	if verticalspd>2||podemexer>0{
@@ -194,7 +196,7 @@ else if place_meeting(x+1,y,obj_block) and verticalspd>-2 and coyotetime<=0 and 
 	}
 	horizontalspd=0
 	if walltime > walltime_max/2 verticalspd=0
-	if walltime < walltime_max/2 verticalspd=2
+	if walltime < walltime_max/5 verticalspd=2
 	sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
@@ -241,9 +243,12 @@ if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
 
 }
 //Aqui termina o código do smash e começa o da esquiva
-if place_meeting(x,y+2,obj_block) and key_dodge and alarm[1]<=0{
+if place_meeting(x,y+1,obj_block) and key_dodge and alarm[1]<=0{
+	scr_camera_shake(9)
 	estado = scr_nedekyn_dodge
 	image_index=0
+	instance_create_layer(x,y,"Instances",obj_efeito_dodge)
+	obj_efeito_dodge.image_xscale = x_scale
 }
 // Aqui termina o código da esquiva
 }
@@ -256,7 +261,7 @@ function scr_nedekyn_dodge(){
 	if skin=1{
 	sprite_index=spr_nykeden_dodge
 	}
-	horizontalspd = 8.5*x_scale
+	horizontalspd = 12*x_scale
 	if image_index >= image_number-1{
 		estado = scr_nedekyn_livre
 		alarm[1]=30
