@@ -96,7 +96,6 @@
     {"id":{"name":"spr_vida","path":"sprites/spr_vida/spr_vida.yy",},},
     {"id":{"name":"crv_vibrate_square_3","path":"animcurves/crv_vibrate_square_3/crv_vibrate_square_3.yy",},},
     {"id":{"name":"spr_block2","path":"sprites/spr_block2/spr_block2.yy",},},
-    {"id":{"name":"obj_block_mexeV","path":"objects/obj_block_mexeV/obj_block_mexeV.yy",},},
     {"id":{"name":"obj_particulas_nykeden","path":"objects/obj_particulas_nykeden/obj_particulas_nykeden.yy",},},
     {"id":{"name":"crv_vibrate_square_2","path":"animcurves/crv_vibrate_square_2/crv_vibrate_square_2.yy",},},
     {"id":{"name":"crv_vibrate_pan_left","path":"animcurves/crv_vibrate_pan_left/crv_vibrate_pan_left.yy",},},

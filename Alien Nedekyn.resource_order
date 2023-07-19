@@ -55,7 +55,6 @@
     {"name":"spr_vida","order":2,"path":"sprites/spr_vida/spr_vida.yy",},
     {"name":"crv_vibrate_square_3","order":6,"path":"animcurves/crv_vibrate_square_3/crv_vibrate_square_3.yy",},
     {"name":"spr_block2","order":6,"path":"sprites/spr_block2/spr_block2.yy",},
-    {"name":"obj_block_mexeV","order":7,"path":"objects/obj_block_mexeV/obj_block_mexeV.yy",},
     {"name":"obj_particulas_nykeden","order":13,"path":"objects/obj_particulas_nykeden/obj_particulas_nykeden.yy",},
     {"name":"crv_vibrate_square_2","order":5,"path":"animcurves/crv_vibrate_square_2/crv_vibrate_square_2.yy",},
     {"name":"crv_vibrate_pan_left","order":3,"path":"animcurves/crv_vibrate_pan_left/crv_vibrate_pan_left.yy",},
