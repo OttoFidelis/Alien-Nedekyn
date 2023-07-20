@@ -4,4 +4,4 @@
 #macro VIEW_WIDTH 683
 #macro VIEW_HEIGHT 384
 #macro VIEW_SCALE 2
-#macro VIEW_SPD 0.03
+#macro VIEW_SPD 6
