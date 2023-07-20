@@ -23,6 +23,6 @@ x_scale=1
 y_scale=1
 skin=0
 walltime=0
-walltime_max = 20
+walltime_max = 120
 estado = scr_nedekyn_livre
 alarm3=45

@@ -150,7 +150,7 @@ if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and
 	}
 		horizontalspd=0
 	if walltime>walltime_max/2 verticalspd=0
-	if walltime<walltime_max/5 verticalspd=2
+	if walltime<walltime_max/2 verticalspd=2
 sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
@@ -166,12 +166,12 @@ sprite_index=spr_nedekyn_wall
 	if key_jump{
 	
 		scr_camera_shake(4)
-		podemexer=2
+		podemexer=8
 		pulos=0
 		coyotetime=0
 		verticalspd=0
-		verticalspd=-alturapulo
-		horizontalspd=-7*x_scale
+		verticalspd=aprroach(-alturapulo, 5,1.1)
+		horizontalspd=aprroach(-8*x_scale, 0,1.1)
 		
 	}
 	if key_down || walltime<=0{
@@ -196,7 +196,7 @@ else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>
 	}
 	horizontalspd=0
 	if walltime > walltime_max/2 verticalspd=0
-	if walltime < walltime_max/5 verticalspd=2
+	if walltime < walltime_max/2 verticalspd=2
 	sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
@@ -211,12 +211,12 @@ else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>
 	if key_jump{
 		
 		scr_camera_shake(4)
-		podemexer=2
+		podemexer=8
 		pulos=0
 		coyotetime=0
 		verticalspd=0
-		verticalspd=-alturapulo
-		horizontalspd=-7*x_scale
+		verticalspd=aprroach(-alturapulo, 5,1.1)
+		horizontalspd=aprroach(-8*x_scale, 0,1.1)
 		
 	}
 if key_down || walltime<=0{
