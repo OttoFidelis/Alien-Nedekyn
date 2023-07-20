@@ -15,6 +15,7 @@
     {"name":"spr_shockwave_distortion_normals_64","order":14,"path":"sprites/spr_shockwave_distortion_normals_64/spr_shockwave_distortion_normals_64.yy",},
     {"name":"obj_vibration","order":8,"path":"objects/obj_vibration/obj_vibration.yy",},
     {"name":"spr_nykeden_wall","order":1,"path":"sprites/spr_nykeden_wall/spr_nykeden_wall.yy",},
+    {"name":"spr_grama1_2","order":3,"path":"sprites/spr_grama1_2/spr_grama1_2.yy",},
     {"name":"spr_efeito_peido","order":1,"path":"sprites/spr_efeito_peido/spr_efeito_peido.yy",},
     {"name":"obj_planta1","order":1,"path":"objects/obj_planta1/obj_planta1.yy",},
     {"name":"obj_block","order":1,"path":"objects/obj_block/obj_block.yy",},
