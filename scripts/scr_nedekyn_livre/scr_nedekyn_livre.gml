@@ -167,7 +167,7 @@ sprite_index=spr_nedekyn_wall
 			horizontalspd=-1*x_scale
 		}
 	if key_jump{
-	
+	if horizontalspd=0||verticalspd=2{
 		scr_camera_shake(4)
 		podemexer=8
 		pulos=0
@@ -183,6 +183,7 @@ sprite_index=spr_nedekyn_wall
 	coyotetime=0
 	horizontalspd=-1*x_scale
 }
+	}
 }
 
 else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=-x_scale{
@@ -212,7 +213,7 @@ else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>
 			horizontalspd=-1*x_scale
 		}
 	if key_jump{
-		
+		if horizontalspd=0||verticalspd=2{
 		scr_camera_shake(4)
 		podemexer=8
 		pulos=0
@@ -228,7 +229,7 @@ if key_down || walltime<=0{
 	coyotetime=0
 	horizontalspd=-1*x_scale
 }
-
+	}
 }
 else{
 	walltime=walltime_max
@@ -250,7 +251,7 @@ if place_meeting(x,y+1,obj_block) and key_dodge and alarm[1]<=0{
 	scr_camera_shake(9)
 	estado = scr_nedekyn_dodge
 	image_index=0
-	instance_create_layer(x,y,"Instances",obj_efeito_dodge)
+	instance_create_layer(x,y,"Efeitos",obj_efeito_dodge)
 	obj_efeito_dodge.image_xscale = x_scale
 }
 // Aqui termina o código da esquiva
