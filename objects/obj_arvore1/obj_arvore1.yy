@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "tilesets Terra",
-    "path": "folders/Objects/tilesets Terra.yy",
+    "name": "Tilesets_Terra",
+    "path": "folders/Objects/Tilesets_Terra.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Colisões",
+    "path": "folders/Objects/Colisões.yy",
   },
   "parentObjectId": {
     "name": "obj_block",
