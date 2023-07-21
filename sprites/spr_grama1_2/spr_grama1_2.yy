@@ -4,7 +4,7 @@
   "name": "spr_grama1_2",
   "bbox_bottom": 99,
   "bbox_left": 35,
-  "bbox_right": 57,
+  "bbox_right": 56,
   "bbox_top": 96,
   "bboxMode": 2,
   "collisionKind": 1,
