@@ -4,11 +4,16 @@ function scr_grama1_livre(){
 sprite_index=spr_grama1
 if place_meeting (x,y,obj_nedekyn) {
 	estado = scr_grama1_down
+	alarm[0]=5
 }
 }
 function scr_grama1_down(){
-	if !place_meeting(x,y,obj_nedekyn){
+	if image_index>=image_number-1 and sprite_index!=spr_grama1_2 image_index=0
+	if !place_meeting(x,y,obj_nedekyn) and alarm[0]<=0{
 	estado = scr_grama1_subindo
+	}
+	if place_meeting (x,y,obj_nedekyn) {
+	alarm[0]=5
 	}
 	sprite_index=spr_grama1_2
 	image_xscale=obj_nedekyn.x_scale
