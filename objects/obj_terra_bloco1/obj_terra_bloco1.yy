@@ -1,18 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_rampaL",
+  "name": "obj_terra_bloco1",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Colisões",
-    "path": "folders/Objects/Colisões.yy",
+    "name": "Tilesets_Terra",
+    "path": "folders/Objects/Tilesets_Terra.yy",
   },
-  "parentObjectId": {
-    "name": "obj_block",
-    "path": "objects/obj_block/obj_block.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,9 +26,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rampaR",
-    "path": "sprites/spr_rampaR/spr_rampaR.yy",
+    "name": "spr_terra_bloco1",
+    "path": "sprites/spr_terra_bloco1/spr_terra_bloco1.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }
