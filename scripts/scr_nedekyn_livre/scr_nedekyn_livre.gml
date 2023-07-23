@@ -139,7 +139,7 @@ if key_jump and pulos>0{
 
 
 // Aqui começa o código do wall jump
-if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=x_scale{
+if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=x_scale {
 	walltime--
 	pulos=0
 	if verticalspd>2||podemexer>0{
@@ -151,6 +151,7 @@ if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and
 	
 	
 	}
+
 		horizontalspd=0
 	if walltime>walltime_max/2 verticalspd=0
 	if walltime<walltime_max/2 verticalspd=2
@@ -158,7 +159,7 @@ sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
 	}
-	
+		
 		if place_meeting(x-1,y,obj_block) {
 		x_scale=-1
 		}
@@ -186,7 +187,7 @@ sprite_index=spr_nedekyn_wall
 	}
 }
 
-else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=-x_scale{
+else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=-x_scale {
 	walltime--
 	pulos=0
 	if verticalspd>2||podemexer>0{
@@ -198,13 +199,16 @@ else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>
 	
 	
 	}
-	horizontalspd=0
+	
+		horizontalspd=0
 	if walltime > walltime_max/2 verticalspd=0
 	if walltime < walltime_max/2 verticalspd=2
 	sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
 	}
+	
+	
 		if place_meeting(x+1,y,obj_block){
 		x_scale=1
 		}
