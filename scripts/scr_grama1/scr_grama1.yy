@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Tilesets Terra",
+    "path": "folders/Scripts/Tilesets Terra.yy",
   },
 }

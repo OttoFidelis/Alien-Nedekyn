@@ -16,19 +16,32 @@ function scr_grama1_down(){
 	alarm[0]=5
 	}
 	sprite_index=spr_grama1_2
+	if image_index<image_number-1{
 	image_xscale=obj_nedekyn.x_scale
+	}
 	if image_index>=image_number-1{
 		image_index=image_number-1
 	}
 	if obj_nedekyn.estado=scr_nedekyn_smash{
-	instance_destroy()
+	estado=scr_grama1_destroy
+		}
 }
-}
+
 function scr_grama1_subindo(){
 	if image_index>=image_number-1 and sprite_index=spr_grama1_2 image_index=0
-	image_xscale=obj_nedekyn.x_scale
 	sprite_index=spr_grama1_3
 	if sprite_index=spr_grama1_3 and image_index>=image_number-1{
 		estado=scr_grama1_livre
+	}
+}
+function scr_grama1_destroy(){
+	if image_index>=image_number-1 and sprite_index!=spr_grama1_desfazendo image_index=0
+	if image_index=0{
+	image_xscale=obj_nedekyn.x_scale
+	}
+	sprite_index=spr_grama1_desfazendo
+	image_alpha-=0.05
+	if sprite_index=spr_grama1_desfazendo and image_index>=image_number-1{
+		instance_destroy()
 	}
 }
