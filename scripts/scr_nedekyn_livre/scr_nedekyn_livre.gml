@@ -259,6 +259,12 @@ if place_meeting(x,y+1,obj_block) and key_dodge and alarm[1]<=0{
 	obj_efeito_dodge.image_xscale = x_scale
 }
 // Aqui termina o código da esquiva
+if place_meeting(x,y,obj_grama1){
+	if move{
+	horizontalspd=velocidadegrama*x_scale
+	}
+}
+
 }
 // Função da esquiva
 function scr_nedekyn_dodge(){

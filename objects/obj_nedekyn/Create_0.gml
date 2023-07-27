@@ -27,3 +27,4 @@ walltime=0
 walltime_max = 120
 estado = scr_nedekyn_livre
 alarm3=45
+velocidadegrama=3.0
