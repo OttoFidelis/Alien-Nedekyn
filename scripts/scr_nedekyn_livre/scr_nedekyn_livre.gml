@@ -119,12 +119,16 @@ if key_jump{
 	}
 }
 
+
 // código que define quando o Nedekyn pode pular
 if key_jump and coyotetime>0 and pulos>0{
 	coyotetime=0
 	verticalspd=0
 	verticalspd-=alturapulo
 }
+
+	
+
 // código que define quando pulos fica igual a 2
 if coyotetime>0 && !parede{
 	pulos=2

@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_block_mexeV",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-  ],
+  "name": "obj_grama1_blockmexeV",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Colisões",
-    "path": "folders/Objects/Colisões.yy",
+    "name": "Tilesets_Terra",
+    "path": "folders/Objects/Tilesets_Terra.yy",
   },
   "parentObjectId": {
-    "name": "obj_block",
-    "path": "objects/obj_block/obj_block.yy",
+    "name": "obj_block_mexeV",
+    "path": "objects/obj_block_mexeV/obj_block_mexeV.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -32,9 +29,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_block_mexe",
-    "path": "sprites/spr_block_mexe/spr_block_mexe.yy",
+    "name": "spr_grama1_blockmexe",
+    "path": "sprites/spr_grama1_blockmexe/spr_grama1_blockmexe.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }
