@@ -5,6 +5,7 @@ if keyboard_check(ord("T")){
 	draw_text(x-120,y-80,"Hsp: "+string(horizontalspd))
 	draw_text(x-120,y-60,"Vsp: "+string(verticalspd))
 	draw_text(x-120,y-40,"Wall time: "+string(walltime))
+	draw_text(x-120,y-20,"Jumptime: "+string(jumptime))
 	if podemexer<=0{
 	draw_text(x+120,y-120,"Pode mexer: "+"sim")
 	}

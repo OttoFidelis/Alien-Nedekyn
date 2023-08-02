@@ -8,6 +8,7 @@ var key_right_pressed = keyboard_check_pressed(vk_right)||keyboard_check_pressed
 var key_left_released = keyboard_check_released(vk_left)||keyboard_check_released(ord("A"))||gamepad_button_check_released(0,gp_padl)
 var key_right_released = keyboard_check_released(vk_right)||keyboard_check_released(ord("D"))||gamepad_button_check_released(0,gp_padr)
 var key_jump = keyboard_check_pressed(vk_space)||gamepad_button_check_pressed(0,gp_face1)
+var key_jumphold = keyboard_check(vk_space)||gamepad_button_check(0,gp_face1)
 var key_down = keyboard_check(vk_down)||keyboard_check(ord("S"))||gamepad_button_check(0,gp_padd)
 var key_up = keyboard_check(vk_up)||keyboard_check(ord("W"))||gamepad_button_check(0,gp_padu)
 var key_attack = keyboard_check_pressed(ord("V"))||gamepad_button_check_pressed(0,gp_face4)
@@ -123,16 +124,31 @@ if key_jump and chao{
 	image_index=0
 	estado=scr_nedekyn_jump
 }
+if !key_jumphold{
+	jumptime=0
+}
+if chao{
+	jumptime=jumptimemax 
+}
+if key_jumphold{
+	jumptime--
+}
+
+
+
+	
+
+
 if key_jump and coyotetime>0 and !chao{
 	coyotetime=0
 	verticalspd=0
-	verticalspd-=alturapulo
+	if jumptime>0 verticalspd-=alturapulo
 }
 // código que define quando o Nedekyn pode pular
 if key_jump and coyotetime>0 and pulos>0 and pulos<2{
 	coyotetime=0
 	verticalspd=0
-	verticalspd-=alturapulo
+	if jumptime>0 verticalspd-=alturapulo
 }
 
 	
@@ -145,7 +161,7 @@ if coyotetime>0 && !parede{
 if key_jump and pulos>0 and pulos<2{
 	verticalspd=0
 	pulos--
-	verticalspd-=alturapulo
+	if jumptime>0 verticalspd-=alturapulo
 }
  
 
@@ -347,6 +363,8 @@ function scr_nedekyn_jump(){
 		estado=scr_nedekyn_livre
 	coyotetime=0
 	verticalspd=0
+	if jumptime>0{
 	verticalspd-=alturapulo
+	}
 	}
 }
