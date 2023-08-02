@@ -1,7 +1,9 @@
 /// @description Aqui ficam as variáveis
 // You can write your code in this editor
+initpulo =8
 jumptime=0
 jumptimemax=20
+initalturapulo = 0.5
 alturapulo=8
 alturapulo2=8
 verticalspdmin=-13

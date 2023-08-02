@@ -120,21 +120,25 @@ if key_jump{
 	}
 }
 
-if key_jump and chao{
-	image_index=0
-	estado=scr_nedekyn_jump
+
+if jumptime>0 and pulos>=1{
+	verticalspd-=alturapulo
 }
-if !key_jumphold{
+
+if chao{
 	jumptime=0
 }
-if chao{
-	jumptime=jumptimemax 
-}
+
 if key_jumphold{
 	jumptime--
 }
+if !key_jumphold {
+	jumptime=0
+}
 
-
+if key_jump and chao{
+	jumptime=jumptimemax
+}
 
 	
 
@@ -142,13 +146,13 @@ if key_jumphold{
 if key_jump and coyotetime>0 and !chao{
 	coyotetime=0
 	verticalspd=0
-	if jumptime>0 verticalspd-=alturapulo
+	verticalspd-=alturapulo
 }
 // código que define quando o Nedekyn pode pular
-if key_jump and coyotetime>0 and pulos>0 and pulos<2{
+if key_jump and coyotetime>0 and pulos=1{
 	coyotetime=0
 	verticalspd=0
-	if jumptime>0 verticalspd-=alturapulo
+	verticalspd-=alturapulo
 }
 
 	
@@ -161,7 +165,7 @@ if coyotetime>0 && !parede{
 if key_jump and pulos>0 and pulos<2{
 	verticalspd=0
 	pulos--
-	if jumptime>0 verticalspd-=alturapulo
+	verticalspd-=alturapulo
 }
  
 
@@ -352,19 +356,5 @@ function scr_nedekyn_smash(){
 			verticalspdmin=verticalspdminnormal
 			verticalspdmax=verticalspdmax
 		}
-	}
-}
-function scr_nedekyn_jump(){
-	sprite_index=spr_nedekyn_jump 
-	if skin=1 sprite_index = spr_nykeden_jump2
-		verticalspd=0
-		horizontalspd=0
-	if image_index>=image_number-1{
-		estado=scr_nedekyn_livre
-	coyotetime=0
-	verticalspd=0
-	if jumptime>0{
-	verticalspd-=alturapulo
-	}
 	}
 }
