@@ -15,14 +15,12 @@ var key_attack = keyboard_check_pressed(ord("V"))||gamepad_button_check_pressed(
 var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)
 var key_dodge = keyboard_check_pressed(ord("C"))||gamepad_button_check_pressed(0,gp_face2)
 var key_pause = keyboard_check_pressed(vk_escape)||gamepad_button_check_pressed(0,gp_start)
-var key_skin = keyboard_check(ord("R"))
+var key_skin = keyboard_check_pressed(ord("R"))
 // código de configuração de skins
 if key_skin{
-	skin=1
+	skin+=1
 }
-else{
-	skin=0
-}
+if skin>2 skin=0
 // Código da corrida
 var move = key_right - key_left !=0 // valor de move baseado nas teclas de andar
 var move_pressed = key_right_pressed - key_left_pressed !=0 
@@ -39,11 +37,17 @@ if horizontalspd!=0{
 	if skin=1{
 			sprite_index = spr_nykeden_run
 		}
+		if skin=2{
+			sprite_index = spr_redekyn_run
+		}
 	}
 	else{
 		sprite_index=spr_nedekyn_idle
 		if skin=1{
 			sprite_index = spr_nykeden_idle
+		}
+		if skin=2{
+			sprite_index = spr_redekyn_idle
 		}
 	}
 	// configuração de velocidade de corrida
@@ -55,6 +59,9 @@ else{
 	sprite_index=spr_nedekyn_idle
 	if skin=1{
 			sprite_index = spr_nykeden_idle
+		}
+		if skin=2{
+			sprite_index = spr_redekyn_idle
 		}
 	velocidade=aprroach(velocidade,0,desaceleracao)
 }
@@ -87,6 +94,9 @@ else{
 	if skin=1{
 		sprite_index=spr_nykeden_jump
 	}
+	if skin=2{
+		sprite_index=spr_redekyn_jump
+	}
 	}
 	if verticalspd>0{
 	sprite_index=spr_nedekyn_fall // sprite do Nedekyn caindo
@@ -96,9 +106,16 @@ else{
 		image_index=image_number-1 // código para a animação de queda não ficar em loop
 	}
 	}
+	if skin=2{
+		sprite_index=spr_redekyn_fall
+		if image_index>=image_number-1{
+		image_index=image_number-1 // código para a animação de queda não ficar em loop
+	}
+	}
 	if image_index>=image_number-1{
 		image_index=image_number-1
 	}
+
 }
 }
 // pulos é o limites de pulos que o Nedekyn pode dar
@@ -167,6 +184,9 @@ sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
 	}
+	if skin=2{
+		sprite_index=spr_redekyn_wall
+	}
 		
 		if place_meeting(x-1,y,obj_block) {
 		x_scale=-1
@@ -214,6 +234,9 @@ else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>
 	sprite_index=spr_nedekyn_wall
 	if skin=1{
 		sprite_index=spr_nykeden_wall
+	}
+	if skin=2{
+		sprite_index=spr_redekyn_wall
 	}
 	
 	
@@ -283,6 +306,9 @@ function scr_nedekyn_dodge(){
 	if skin=1{
 	sprite_index=spr_nykeden_dodge
 	}
+	if skin=2{
+	sprite_index=spr_redekyn_dodge
+	}
 	horizontalspd = 12*x_scale
 	if image_index >= image_number-1{
 		estado = scr_nedekyn_livre
@@ -302,12 +328,18 @@ function scr_nedekyn_smash(){
 		if skin=1{
 			sprite_index = spr_nykeden_jump
 		}
+		if skin=2{
+			sprite_index = spr_redekyn_jump
+		}
 	}
 	if verticalspd>0{
 		gravid=3
 		sprite_index=spr_nedekyn_fall
 		if skin=1{
 			sprite_index = spr_nykeden_fall
+		}
+			if skin=2{
+			sprite_index = spr_redekyn_fall
 		}
 	}
 	horizontalspd=0
@@ -325,6 +357,9 @@ function scr_nedekyn_smash(){
 		sprite_index=spr_nedekyn_down
 		if skin=1{
 		sprite_index=spr_nykeden_down
+	}
+	if skin=2{
+		sprite_index=spr_redekyn_down
 	}
 		if image_index>=image_number-1{
 			estado=scr_nedekyn_livre
