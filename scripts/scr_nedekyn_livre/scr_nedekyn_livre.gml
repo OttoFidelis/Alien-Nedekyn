@@ -121,27 +121,15 @@ if key_jump{
 }
 
 
-if jumptime>0 and pulos=2{
-	verticalspd-=initalturapulo
+if key_jump and pulos=2{
+	verticalspd-=alturapulo
 }
 
-if chao {
-	if key_jump{
-		jumptime=jumptimemax
-	}
-}
-
-if key_jumphold{
-	jumptime--
-}
-if !key_jumphold {
-	jumptime=0
-}
 
 if key_jump and coyotetime>0 and !chao{
 	coyotetime=0
 	verticalspd=0
-	verticalspd-=initalturapulo
+	verticalspd-=alturapulo
 }
 	
 
