@@ -121,12 +121,12 @@ if key_jump{
 }
 
 
-if jumptime>0 and pulos>=1{
+if jumptime>0 and pulos=2{
 	verticalspd-=initalturapulo
 }
 
 if chao {
-	if key_jump and pulos{
+	if key_jump{
 		jumptime=jumptimemax
 	}
 }
@@ -138,23 +138,11 @@ if !key_jumphold {
 	jumptime=0
 }
 
-
-
-	
-
-
 if key_jump and coyotetime>0 and !chao{
 	coyotetime=0
 	verticalspd=0
 	verticalspd-=initalturapulo
 }
-// código que define quando o Nedekyn pode pular
-if key_jump  and pulos=1{
-	coyotetime=0
-	verticalspd=0
-	verticalspd-=alturapulo
-}
-
 	
 
 // código que define quando pulos fica igual a 2
@@ -162,7 +150,7 @@ if coyotetime>0 && !parede{
 	pulos=2
 }
 //código que define quando o limites de pulos diminui
-if key_jump and pulos>0 and pulos<2{
+if key_jump and pulos=1{
 	verticalspd=0
 	pulos--
 	verticalspd-=alturapulo
