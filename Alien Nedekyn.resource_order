@@ -20,6 +20,7 @@
     {"name":"Tilesets Terra","order":17,"path":"folders/Sprites/Tilesets Terra.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"spr_grama_bloco1_rampa","order":10,"path":"sprites/spr_grama_bloco1_rampa/spr_grama_bloco1_rampa.yy",},
     {"name":"crv_vibrate_square_4","order":7,"path":"animcurves/crv_vibrate_square_4/crv_vibrate_square_4.yy",},
     {"name":"spr_redekyn_wall","order":4,"path":"sprites/spr_redekyn_wall/spr_redekyn_wall.yy",},
     {"name":"spr_nedekyn_idle","order":12,"path":"sprites/spr_nedekyn_idle/spr_nedekyn_idle.yy",},
@@ -63,6 +64,7 @@
     {"name":"spr_nedekyn_mask","order":9,"path":"sprites/spr_nedekyn_mask/spr_nedekyn_mask.yy",},
     {"name":"spr_efeito_dodge","order":3,"path":"sprites/spr_efeito_dodge/spr_efeito_dodge.yy",},
     {"name":"spr_grama_bloco1_beiradaR","order":6,"path":"sprites/spr_grama_bloco1_beiradaR/spr_grama_bloco1_beiradaR.yy",},
+    {"name":"obj_grama_bloco1_rampa","order":7,"path":"objects/obj_grama_bloco1_rampa/obj_grama_bloco1_rampa.yy",},
     {"name":"crv_vibrate_linear_fade_in","order":1,"path":"animcurves/crv_vibrate_linear_fade_in/crv_vibrate_linear_fade_in.yy",},
     {"name":"spr_rampaL","order":6,"path":"sprites/spr_rampaL/spr_rampaL.yy",},
     {"name":"obj_rampaR","order":4,"path":"objects/obj_rampaR/obj_rampaR.yy",},

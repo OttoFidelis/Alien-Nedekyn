@@ -51,6 +51,7 @@
     "IDEVersion": "2023.6.0.92",
   },
   "resources": [
+    {"id":{"name":"spr_grama_bloco1_rampa","path":"sprites/spr_grama_bloco1_rampa/spr_grama_bloco1_rampa.yy",},},
     {"id":{"name":"crv_vibrate_square_4","path":"animcurves/crv_vibrate_square_4/crv_vibrate_square_4.yy",},},
     {"id":{"name":"spr_redekyn_wall","path":"sprites/spr_redekyn_wall/spr_redekyn_wall.yy",},},
     {"id":{"name":"spr_nedekyn_idle","path":"sprites/spr_nedekyn_idle/spr_nedekyn_idle.yy",},},
@@ -104,6 +105,7 @@
     {"id":{"name":"spr_grama_bloco1_beiradaR","path":"sprites/spr_grama_bloco1_beiradaR/spr_grama_bloco1_beiradaR.yy",},},
     {"id":{"name":"scr_vibracao","path":"scripts/scr_vibracao/scr_vibracao.yy",},},
     {"id":{"name":"scr_nedekyn_livre","path":"scripts/scr_nedekyn_livre/scr_nedekyn_livre.yy",},},
+    {"id":{"name":"obj_grama_bloco1_rampa","path":"objects/obj_grama_bloco1_rampa/obj_grama_bloco1_rampa.yy",},},
     {"id":{"name":"crv_vibrate_linear_fade_in","path":"animcurves/crv_vibrate_linear_fade_in/crv_vibrate_linear_fade_in.yy",},},
     {"id":{"name":"spr_rampaL","path":"sprites/spr_rampaL/spr_rampaL.yy",},},
     {"id":{"name":"obj_rampaR","path":"objects/obj_rampaR/obj_rampaR.yy",},},

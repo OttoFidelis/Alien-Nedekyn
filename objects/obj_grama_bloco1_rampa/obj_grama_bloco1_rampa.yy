@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_terra_bloco1",
+  "name": "obj_grama_bloco1_rampa",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_terra_bloco1",
-    "path": "sprites/spr_terra_bloco1/spr_terra_bloco1.yy",
+    "name": "spr_grama_bloco1_rampa",
+    "path": "sprites/spr_grama_bloco1_rampa/spr_grama_bloco1_rampa.yy",
   },
   "spriteMaskId": null,
   "visible": true,

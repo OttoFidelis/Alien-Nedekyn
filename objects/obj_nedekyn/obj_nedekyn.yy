@@ -35,7 +35,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_nedekyn_idle",
+    "path": "sprites/spr_nedekyn_idle/spr_nedekyn_idle.yy",
+  },
   "spriteMaskId": {
     "name": "spr_nedekyn_mask",
     "path": "sprites/spr_nedekyn_mask/spr_nedekyn_mask.yy",
