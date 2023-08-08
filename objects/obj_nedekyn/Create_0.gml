@@ -3,9 +3,8 @@
 initpulo =8
 jumptime=0
 jumptimemax=5
-initalturapulo = 2.2
-alturapulo=8
-alturapulo2=8
+alturapulo=2
+walljump_alturapulo=8
 verticalspdmin=-13
 verticalspdmax=13
 verticalspdminnormal=-13

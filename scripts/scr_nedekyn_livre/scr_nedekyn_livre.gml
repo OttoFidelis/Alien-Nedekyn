@@ -85,6 +85,7 @@ o coyote time serve para melhorar a jogabilidade, facilitando o jogo
 */
 if chao{
 	coyotetime=coyotetimemax
+	pulos=1
 }
 // se o Nedekyn não está no chão, o coyote time diminui 
 else{
@@ -122,44 +123,26 @@ else{
 if coyotetime<0{
 	coyotetime=0
 }
-if chao{
-	pulos=2
-}
-if !chao && pulos=2 && coyotetime=0{
-	pulos=1
-}
-if key_jump{
-	if pulos = 1{
-		var vibra = instance_create_depth(x,y,depth,obj_vibracao)// vibração de controle ( não sei se tá funcionando )
-		vibra.strengh_left = 3
-		vibra.strengh_right = 3
-		instance_create_layer(x,y,"Instances",obj_efeito_duplopulo) // gera a fumacinha em baixo do Nedekyn quando ele faz o pulo duplo
-	}
-}
+
+if chao jumptime=0
 
 
-if key_jump and pulos=2{
-	verticalspd-=alturapulo
+if key_jump and pulos=1{
+	jumptime=jumptimemax
+	pulos--
 }
-
-
+if jumptime>0 verticalspd-=alturapulo
+if !key_jumphold jumptime=0
 if key_jump and coyotetime>0 and !chao{
 	coyotetime=0
 	verticalspd=0
 	verticalspd-=alturapulo
 }
-	
+jumptime--	
 
-// código que define quando pulos fica igual a 2
-if coyotetime>0 && !parede{
-	pulos=2
-}
+
 //código que define quando o limites de pulos diminui
-if key_jump and pulos=1{
-	verticalspd=0
-	pulos--
-	verticalspd-=alturapulo
-}
+
  
 
 
@@ -202,7 +185,7 @@ sprite_index=spr_nedekyn_wall
 		pulos=0
 		coyotetime=0
 		verticalspd=0
-		verticalspd=aprroach(-alturapulo, 5,1.1)
+		verticalspd=aprroach(-walljump_alturapulo, 5,1.1)
 		horizontalspd=aprroach(-8*x_scale, 0,1.1)
 		
 	}
@@ -254,7 +237,7 @@ else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>
 		pulos=0
 		coyotetime=0
 		verticalspd=0
-		verticalspd=aprroach(-alturapulo, 5,1.1)
+		verticalspd=aprroach(-walljump_alturapulo, 5,1.1)
 		horizontalspd=aprroach(-8*x_scale, 0,1.1)
 		
 	}
