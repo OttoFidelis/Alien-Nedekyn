@@ -120,8 +120,9 @@ else{
 }
 }
 // pulos é o limites de pulos que o Nedekyn pode dar
-if coyotetime<0{
+if coyotetime<=0{
 	coyotetime=0
+	pulos=0
 }
 
 if chao jumptime=0
