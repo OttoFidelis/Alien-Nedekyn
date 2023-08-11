@@ -280,7 +280,7 @@ if place_meeting(x,y,obj_grama1){
 	horizontalspd=velocidadegrama*x_scale
 	}
 }
-
+if key_gun and chao estado=scr_nedekyn_gun
 }
 // Função da esquiva
 function scr_nedekyn_dodge(){
@@ -353,4 +353,13 @@ function scr_nedekyn_smash(){
 			verticalspdmax=verticalspdmax
 		}
 	}
+}
+function scr_nedekyn_gun(){
+	instance_create_layer(x+15*x_scale,y-64,"instances",obj_nedekyn_municao)
+	var chao = place_meeting(x,y+1,obj_block)
+	var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)
+	if skin=0 sprite_index = spr_nedekyn_gun
+	if !key_gun || !chao estado = scr_nedekyn_livre
+	horizontalspd=0
+	verticalspd=0
 }
