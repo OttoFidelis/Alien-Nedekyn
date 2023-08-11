@@ -8,7 +8,7 @@ if place_meeting(x+horizontalspd,y,obj_block){
 	
 }
 if place_meeting(x+sign(horizontalspd),y,obj_block){
-	instance_create_layer(x,y,"frente",obj_efeito_tiro_impacto)
+	instance_create_layer(x,y,"Efeitos",obj_efeito_tiro_impacto)
 	instance_destroy()
 }
 if obj_nedekyn.estado=scr_nedekyn_livre{
