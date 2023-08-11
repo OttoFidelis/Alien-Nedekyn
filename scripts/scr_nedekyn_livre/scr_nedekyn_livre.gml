@@ -124,6 +124,7 @@ if coyotetime<=0{
 	coyotetime=0
 	pulos=0
 }
+if key_jump coyotetime=0
 
 if chao jumptime=0
 
