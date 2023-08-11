@@ -1,5 +1,7 @@
 /// @description Aqui ficam as variáveis
 // You can write your code in this editor
+gun=0
+gunmax=10
 debug=0
 initpulo =8
 jumptime=0
