@@ -280,7 +280,13 @@ if place_meeting(x,y,obj_grama1){
 	horizontalspd=velocidadegrama*x_scale
 	}
 }
-if key_gun and chao estado=scr_nedekyn_gun gun=gunmax instance_create_layer(x+x_scale,y-50,"instances",obj_nedekyn_municao)
+if chao {
+	if key_gun{
+	estado=scr_nedekyn_gun 
+	gun=gunmax 
+	instance_create_layer(x+x_scale,y-50,"instances",obj_nedekyn_municao)
+	}
+	}
 }
 // Função da esquiva
 function scr_nedekyn_dodge(){
