@@ -355,7 +355,7 @@ function scr_nedekyn_smash(){
 	}
 }
 function scr_nedekyn_gun(){
-	instance_create_layer(x+15*x_scale,y-64,"instances",obj_nedekyn_municao)
+	instance_create_layer(x+50*x_scale,y-60,"instances",obj_nedekyn_municao)
 	var chao = place_meeting(x,y+1,obj_block)
 	var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)
 	if skin=0 sprite_index = spr_nedekyn_gun
