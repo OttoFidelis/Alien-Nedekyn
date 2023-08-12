@@ -364,39 +364,41 @@ var key_up = keyboard_check(vk_up)||keyboard_check(ord("W"))||gamepad_button_che
 var key_left = keyboard_check(vk_left)||keyboard_check(ord("A"))||gamepad_button_check(0,gp_padl)
 var key_right = keyboard_check(vk_right)||keyboard_check(ord("D"))||gamepad_button_check(0,gp_padr)
 var key_down = keyboard_check(vk_down)||keyboard_check(ord("S"))||gamepad_button_check(0,gp_padd)
+var move = key_right - key_left !=0
 if key_left x_scale=-1
 if key_right x_scale=1
 	gun--
 	if gun<=0 gun=gunmax
 	if gun=gunmax{
 	instance_create_layer(x+x_scale,y-50,"instances",obj_nedekyn_municao)
-	if !key_up{
+	if move=1 || move=-1 || move=0 and !key_up{
+			if skin=0 sprite_index = spr_nedekyn_gun
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
-if key_right and key_up{
+if move=1 and key_up{
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
-if key_left and key_up{
+if move=-1 and key_up{
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
-if  key_right and key_down{
+if  move=1 and key_down{
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
-if key_left and key_down{
+if move=-1 and key_down{
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
-if !key_right and !key_left and key_up{
+if move=0 and key_up{
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
 }
 
 	}
 	var chao = place_meeting(x,y+1,obj_block)
 	var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)
-	if skin=0 sprite_index = spr_nedekyn_gun
+
 	if !key_gun || !chao estado = scr_nedekyn_livre
 	horizontalspd=0
 	verticalspd=0

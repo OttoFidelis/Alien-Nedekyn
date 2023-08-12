@@ -217,6 +217,7 @@
     {"name":"inst_79B3C006","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_75E56293","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_1474342C","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_66B6B659","path":"rooms/room_test/room_test.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -517,6 +518,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1CB072DD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_particulas_redekyn","path":"objects/obj_particulas_redekyn/obj_particulas_redekyn.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":64.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_75E56293","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_rampaL","path":"objects/obj_rampaL/obj_rampaL.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":672.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1474342C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":96.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_66B6B659","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":9.5,"x":-32.0,"y":736.0,},
       ],"layers":[],"properties":[
         {"name":"g_OutlineColour","type":1,"value":"#FF070707",},
         {"name":"g_OutlineRadius","type":0,"value":"2",},
