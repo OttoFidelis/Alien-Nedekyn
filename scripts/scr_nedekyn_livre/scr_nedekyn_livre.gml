@@ -370,14 +370,14 @@ if key_right x_scale=1
 	gun--
 	if gun<=0 gun=gunmax
 	if gun=gunmax{
-	instance_create_layer(x+x_scale,y-50,"instances",obj_nedekyn_municao)
+	instance_create_layer(x+x_scale,y-70,"instances",obj_nedekyn_municao)
 	if move=1 || move=-1 || move=0 and !key_up{
-			if skin=0 sprite_index = spr_nedekyn_gun
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
 if move=1 and key_up{
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+
 }
 if move=-1 and key_up{
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
@@ -393,9 +393,10 @@ obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
 if move=0 and key_up{
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
+obj_nedekyn_municao.image_angle=90
 }
-
 	}
+	if skin=0 sprite_index = spr_nedekyn_gun
 	var chao = place_meeting(x,y+1,obj_block)
 	var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)
 
