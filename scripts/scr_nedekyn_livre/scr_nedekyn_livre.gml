@@ -283,7 +283,7 @@ if place_meeting(x,y,obj_grama1){
 if chao {
 	if key_gun{
 	estado=scr_nedekyn_gun 
-	gun=gunmax 
+	gun=gunmax+2
 	instance_create_layer(x+x_scale,y-50,"instances",obj_nedekyn_municao)
 	}
 	}
@@ -361,10 +361,39 @@ function scr_nedekyn_smash(){
 	}
 }
 function scr_nedekyn_gun(){
+var key_up = keyboard_check(vk_up)||keyboard_check(ord("W"))||gamepad_button_check(0,gp_padu)
+var key_left = keyboard_check(vk_left)||keyboard_check(ord("A"))||gamepad_button_check(0,gp_padl)
+var key_right = keyboard_check(vk_right)||keyboard_check(ord("D"))||gamepad_button_check(0,gp_padr)
+var key_down = keyboard_check(vk_down)||keyboard_check(ord("S"))||gamepad_button_check(0,gp_padd)
+if key_left x_scale=-1
+if key_right x_scale=1
 	gun--
 	if gun<=0 gun=gunmax
 	if gun=gunmax{
 	instance_create_layer(x+x_scale,y-50,"instances",obj_nedekyn_municao)
+	if !key_up{
+obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+}
+if key_right and key_up{
+obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
+obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+}
+if key_left and key_up{
+obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
+obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+}
+if  key_right and key_down{
+obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd
+obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+}
+if key_left and key_down{
+obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd
+obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+}
+if !key_right and !key_left and key_up{
+obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
+}
+
 	}
 	var chao = place_meeting(x,y+1,obj_block)
 	var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)

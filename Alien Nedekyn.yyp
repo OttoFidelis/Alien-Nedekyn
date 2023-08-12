@@ -98,6 +98,7 @@
     {"id":{"name":"spr_colisao_blockmexe","path":"sprites/spr_colisao_blockmexe/spr_colisao_blockmexe.yy",},},
     {"id":{"name":"spr_nedekyn_atacando","path":"sprites/spr_nedekyn_atacando/spr_nedekyn_atacando.yy",},},
     {"id":{"name":"spr_nykeden_fall","path":"sprites/spr_nykeden_fall/spr_nykeden_fall.yy",},},
+    {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
     {"id":{"name":"obj_colisao_blockmexe","path":"objects/obj_colisao_blockmexe/obj_colisao_blockmexe.yy",},},
     {"id":{"name":"obj_grama1","path":"objects/obj_grama1/obj_grama1.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
