@@ -284,7 +284,6 @@ if chao {
 	if key_gun{
 	estado=scr_nedekyn_gun 
 	gun=gunmax+2
-	instance_create_layer(x+x_scale,y-50,"instances",obj_nedekyn_municao)
 	}
 	}
 }
