@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_grama1_blockmexe",
-  "bbox_bottom": 30,
+  "bbox_bottom": 31,
   "bbox_left": 1,
   "bbox_right": 61,
   "bbox_top": 0,
