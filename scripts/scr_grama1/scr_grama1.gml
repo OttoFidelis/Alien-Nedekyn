@@ -2,9 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para obter mais informações
 function scr_grama1_livre(){
 sprite_index=spr_grama1
-if place_meeting (x,y,obj_nedekyn) {
+if place_meeting (x,y,obj_nedekyn)  {
 	estado = scr_grama1_down
 	alarm[0]=5
+}
+if place_meeting (x,y-5,obj_efeito_tiro_impacto_chao){
+	estado = scr_grama1_destroy
 }
 }
 function scr_grama1_down(){
