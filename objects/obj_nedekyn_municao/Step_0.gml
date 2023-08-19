@@ -26,11 +26,11 @@ if place_meeting(x,y+verticalspd,obj_block){
 	
 }
 if place_meeting(x,y+1,obj_block) and verticalspd<0{
-	instance_create_layer(x,y+20,"Particulas",obj_efeito_tiro_impacto)
+	instance_create_layer(x,y,"Particulas",obj_efeito_tiro_impacto)
 	instance_destroy()
 }
 if place_meeting(x+sign(horizontalspd),y,obj_block) and !place_meeting(x,y-1,obj_block){
-	instance_create_layer(x,y+20,"Particulas",obj_efeito_tiro_impacto)
+	instance_create_layer(x,y,"Particulas",obj_efeito_tiro_impacto)
 	instance_destroy()
 }
 if place_meeting(x,y-1,obj_block) and verticalspd>0{

@@ -370,7 +370,7 @@ if key_right x_scale=1
 	gun--
 	if gun<=0 gun=gunmax
 	if gun=gunmax{
-	instance_create_layer(x+x_scale,y-60,"instances",obj_nedekyn_municao)
+	instance_create_layer(x+x_scale*-10,y-65,"instances",obj_nedekyn_municao)
 	if move=1 || move=-1 || move=0 and !key_up{
 if skin=0 sprite_index = spr_nedekyn_gun
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
