@@ -183,12 +183,12 @@ sprite_index=spr_nedekyn_wall
 	if key_jump{
 	if horizontalspd=0||verticalspd=2{
 		scr_camera_shake(4)
-		podemexer=8
+		podemexer=1
 		pulos=0
 		coyotetime=0
 		verticalspd=0
 		verticalspd=aprroach(-walljump_alturapulo, 5,1.1)
-		horizontalspd=aprroach(-8*x_scale, 0,1.1)
+		horizontalspd=aprroach(-12*x_scale, 0,1.1)
 		
 	}
 	if key_down || walltime<=0{
@@ -235,12 +235,12 @@ else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>
 	if key_jump{
 		if horizontalspd=0||verticalspd=2{
 		scr_camera_shake(4)
-		podemexer=8
+		podemexer=1
 		pulos=0
 		coyotetime=0
 		verticalspd=0
 		verticalspd=aprroach(-walljump_alturapulo, 5,1.1)
-		horizontalspd=aprroach(-8*x_scale, 0,1.1)
+		horizontalspd=aprroach(-12*x_scale, 0,1.1)
 		
 	}
 if key_down || walltime<=0{
@@ -268,7 +268,7 @@ if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
 }
 //Aqui termina o código do smash e começa o da esquiva
 if place_meeting(x,y+1,obj_block) and key_dodge and alarm[1]<=0{
-	scr_camera_shake(9)
+	scr_camera_shake(3)
 	estado = scr_nedekyn_dodge
 	image_index=0
 	instance_create_layer(x,y,"Efeitos",obj_efeito_dodge)
@@ -299,7 +299,7 @@ function scr_nedekyn_dodge(){
 	if skin=2{
 	sprite_index=spr_redekyn_dodge
 	}
-	horizontalspd = 12*x_scale
+	horizontalspd = 24*x_scale
 	if image_index >= image_number-1{
 		estado = scr_nedekyn_livre
 		alarm[1]=30
@@ -312,7 +312,7 @@ function scr_nedekyn_dodge(){
 }
 // Função do smash
 function scr_nedekyn_smash(){
-	gravid = 0.4
+	gravid = 1.1
 	if verticalspd<0{
 		sprite_index=spr_nedekyn_jump1
 		if skin=1{
@@ -323,7 +323,7 @@ function scr_nedekyn_smash(){
 		}
 	}
 	if verticalspd>0{
-		gravid=3
+		gravid=8
 		sprite_index=spr_nedekyn_fall
 		if skin=1{
 			sprite_index = spr_nykeden_fall
@@ -340,7 +340,7 @@ function scr_nedekyn_smash(){
 	}
 	if place_meeting(x,y+1,obj_block){
 		verticalspd=0
-	    scr_camera_shake(6)
+	    scr_camera_shake(4)
 		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
 		vibra.strengh_left = 10
 		vibra.strengh_right = 10
@@ -396,6 +396,7 @@ obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd
 obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
 if move=0 and key_up{
+	sprite_index=spr_nedekyn_gun_up
 obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
 obj_nedekyn_municao.image_angle=90
 }

@@ -34,7 +34,7 @@ if place_meeting(x+sign(horizontalspd),y,obj_block) and !place_meeting(x,y-1,obj
 	instance_destroy()
 }
 if place_meeting(x,y-1,obj_block) and verticalspd>0{
-	instance_create_layer(x,y-4,"Particulas",obj_efeito_tiro_impacto_chao)
+	instance_create_layer(x,y-34,"Particulas",obj_efeito_tiro_impacto_chao)
 	instance_destroy()
 }
 if obj_nedekyn.estado=scr_nedekyn_livre{
