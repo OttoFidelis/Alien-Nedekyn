@@ -17,15 +17,13 @@ if place_meeting(x+horizontalspd,y,obj_block){
 	while !place_meeting(x+sign(horizontalspd),y,obj_block){
 		x+=sign(horizontalspd)
 	}
-	
 }
 if place_meeting(x,y+verticalspd,obj_block){
 	while !place_meeting(x,y+sign(verticalspd),obj_block){
 		y+=sign(verticalspd)
 	}
-	
 }
-if place_meeting(x,y+1,obj_block) and verticalspd<0{
+if place_meeting(x,y+sign(verticalspd),obj_block) and verticalspd<0{
 	instance_create_layer(x,y,"Particulas",obj_efeito_tiro_impacto)
 	instance_destroy()
 }
@@ -33,8 +31,8 @@ if place_meeting(x+sign(horizontalspd),y,obj_block) and !place_meeting(x,y-1,obj
 	instance_create_layer(x,y,"Particulas",obj_efeito_tiro_impacto)
 	instance_destroy()
 }
-if place_meeting(x,y-1,obj_block) and verticalspd>0{
-	instance_create_layer(x,y-23,"Particulas",obj_efeito_tiro_impacto_chao)
+if place_meeting(x,y+sign(verticalspd),obj_block) and verticalspd>0{
+	instance_create_layer(x,y+12,"Particulas",obj_efeito_tiro_impacto_chao)
 	instance_destroy()
 }
 if obj_nedekyn.estado=scr_nedekyn_livre{
