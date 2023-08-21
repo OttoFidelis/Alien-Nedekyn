@@ -2,8 +2,8 @@
 // Você pode escrever seu código neste editor
 horizontalspd=0
 verticalspd=0
-horizontalmaxspd=50
-verticalmaxspd=50
+horizontalmaxspd=60
+verticalmaxspd=35
 
 
 
