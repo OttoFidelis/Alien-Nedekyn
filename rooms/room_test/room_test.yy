@@ -525,15 +525,15 @@
       ],"spriteId":{"name":"spr_bkg_terra2","path":"sprites/spr_bkg_terra2/spr_bkg_terra2.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":300,"y":0,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background03","animationFPS":30.0,"animationSpeedType":0,"colour":4280188927,"depth":400,"effectEnabled":true,"effectType":"_filter_colourise","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
-        {"name":"g_TintCol","type":1,"value":"#FF61E5E8",},
+        {"name":"g_TintCol","type":1,"value":"#FFE5E1A2",},
       ],"spriteId":{"name":"spr_bkg_terra3","path":"sprites/spr_bkg_terra3/spr_bkg_terra3.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":300,"y":0,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background04","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":500,"effectEnabled":true,"effectType":"_filter_colourise","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
-        {"name":"g_TintCol","type":1,"value":"#FF9BFFA3",},
+        {"name":"g_TintCol","type":1,"value":"#FFC5FFAD",},
       ],"spriteId":{"name":"spr_bkg_terra4","path":"sprites/spr_bkg_terra4/spr_bkg_terra4.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":335,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background01","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":600,"effectEnabled":true,"effectType":"_filter_colourise","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"0.525",},
-        {"name":"g_TintCol","type":1,"value":"#FF4CF0FF",},
+        {"name":"g_TintCol","type":1,"value":"#FFB3FF87",},
       ],"spriteId":{"name":"spr_bkg_terra1","path":"sprites/spr_bkg_terra1/spr_bkg_terra1.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "parent": {
