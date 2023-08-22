@@ -213,7 +213,6 @@
     {"name":"inst_66B6B659","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_12AE1FD4","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_63F8BB65","path":"rooms/room_test/room_test.yy",},
-    {"name":"inst_73504D0F","path":"rooms/room_test/room_test.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -495,8 +494,7 @@
         {"name":"g_HueSaturation","type":0,"value":"0.75",},
       ],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"light","depth":-100,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_63F8BB65","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bkg_terra_light1","path":"objects/obj_bkg_terra_light1/obj_bkg_terra_light1.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2317.0,"y":-28.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_73504D0F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bkg_terra_light2","path":"objects/obj_bkg_terra_light2/obj_bkg_terra_light2.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":160.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_63F8BB65","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_bkg_terra_light1","path":"objects/obj_bkg_terra_light1/obj_bkg_terra_light1.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-115.0,"y":0.0,},
       ],"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"0.65",},
       ],"userdefinedDepth":false,"visible":true,},
@@ -537,7 +535,7 @@
       ],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background03","animationFPS":30.0,"animationSpeedType":0,"colour":4281698815,"depth":500,"effectEnabled":true,"effectType":"_filter_colourise","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
-        {"name":"g_TintCol","type":1,"value":"#FFFFDFA0",},
+        {"name":"g_TintCol","type":1,"value":"#FFD4FF99",},
       ],"spriteId":{"name":"spr_bkg_terra3","path":"sprites/spr_bkg_terra3/spr_bkg_terra3.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":300,"y":0,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background04","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":600,"effectEnabled":true,"effectType":"_filter_colourise","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
@@ -545,7 +543,7 @@
       ],"spriteId":{"name":"spr_bkg_terra4","path":"sprites/spr_bkg_terra4/spr_bkg_terra4.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":335,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background01","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":700,"effectEnabled":true,"effectType":"_filter_colourise","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"0.525",},
-        {"name":"g_TintCol","type":1,"value":"#FFB3FF87",},
+        {"name":"g_TintCol","type":1,"value":"#FF4CFFC3",},
       ],"spriteId":{"name":"spr_bkg_terra1","path":"sprites/spr_bkg_terra1/spr_bkg_terra1.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "parent": {

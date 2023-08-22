@@ -131,6 +131,7 @@
     {"id":{"name":"Sprite16","path":"sprites/Sprite16/Sprite16.yy",},},
     {"id":{"name":"obj_efeito_duplopulo","path":"objects/obj_efeito_duplopulo/obj_efeito_duplopulo.yy",},},
     {"id":{"name":"obj_rampaL","path":"objects/obj_rampaL/obj_rampaL.yy",},},
+    {"id":{"name":"spr_bkg_terra5","path":"sprites/spr_bkg_terra5/spr_bkg_terra5.yy",},},
     {"id":{"name":"spr_nedekyn_gun_d_up","path":"sprites/spr_nedekyn_gun_d_up/spr_nedekyn_gun_d_up.yy",},},
     {"id":{"name":"spr_nedekyn_gun_up","path":"sprites/spr_nedekyn_gun_up/spr_nedekyn_gun_up.yy",},},
     {"id":{"name":"spr_nedekyn_fall","path":"sprites/spr_nedekyn_fall/spr_nedekyn_fall.yy",},},
