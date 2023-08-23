@@ -9,8 +9,8 @@ if instance_exists(global.view_target){
 	var c_x = camera_get_view_x(view_camera[VIEW])
 	var c_y = camera_get_view_y(view_camera[VIEW])
 	
-	var n_x = lerp(c_x,x_to,VIEW_SPD)
-	var n_y = lerp(c_y,y_to,VIEW_SPD)
+	var n_x = aprroach(c_x,x_to,VIEW_SPD)
+	var n_y = aprroach(c_y,y_to,VIEW_SPD)
 	
 	camera_set_view_pos(view_camera[VIEW],x_to,y_to)
 }

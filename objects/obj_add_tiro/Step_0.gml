@@ -1,11 +1,9 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
-horizontalspd=0
-verticalspd=0
-horizontalmaxspd=30*1.5
-verticalmaxspd=13.5*1.5
-
-
+obj_nedekyn.tiros++
+if image_index>=image_number-1{
+instance_destroy()
+}
 
 
 

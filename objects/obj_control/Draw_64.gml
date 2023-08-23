@@ -54,6 +54,7 @@ if debug=1{
 	if obj_nedekyn.horizontalspd=0{
 	draw_text(x,y+220,"Parado")
 	}
+	draw_text(x,y+240,"Tiros: "+ string (obj_nedekyn.tiros))
 }
 
 
