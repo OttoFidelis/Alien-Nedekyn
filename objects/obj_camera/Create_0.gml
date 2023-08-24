@@ -13,7 +13,7 @@ estado_nedekyn = function(){
 		estado= estado_parado 
 		exit
 	}
-	x=alvo.x
+	x=aprroach(x,alvo.x,alvo.velocidademaxima)
 	y=alvo.y
 }
 estado=estado_nedekyn

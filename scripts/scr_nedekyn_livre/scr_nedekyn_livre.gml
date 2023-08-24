@@ -67,7 +67,7 @@ else{
 }
 
 // pode mexer define quando o Nedekyn pode andar, se for 0 ou negativo, o nedekyn pode andar
-podemexer =lerp(podemexer,0,0.5)
+podemexer =lerp(podemexer,0,0.8)
 if podemexer<=0 horizontalspd = lengthdir_x(velocidade,direcao)
 
 // x_scale é a direção que o Nedekyn olha
@@ -148,124 +148,8 @@ jumptime--
  
 
 
-// Aqui começa o código do wall jump
-if place_meeting(x-1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=x_scale {
-	walltime--
-	pulos=0
-	if verticalspd>2||podemexer>0{
-		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
-		vibra.strengh_left = 2
-		vibra.strengh_right = 2
-	scr_camera_shake(1)
-	pulos=0
-	
-	
-	}
 
-		horizontalspd=0
-	if walltime>walltime_max/2 verticalspd=0
-	if walltime<walltime_max/2 verticalspd=2
-sprite_index=spr_nedekyn_wall
-	if skin=1{
-		sprite_index=spr_nykeden_wall
-	}
-	if skin=2{
-		sprite_index=spr_redekyn_wall
-	}
-		
-		if place_meeting(x-1,y,obj_block) {
-		x_scale=-1
-		}
-		else{
-			podemexer=1
-			horizontalspd=-1*x_scale
-		}
-	if key_jump{
-	if horizontalspd=0||verticalspd=2{
-		scr_camera_shake(4)
-		podemexer=1
-		pulos=0
-		coyotetime=0
-		verticalspd=0
-		verticalspd=aprroach(-walljump_alturapulo, 5,1.1)
-		horizontalspd=aprroach(-12*x_scale, 0,1.1)
-		
-	}
-	if key_down || walltime<=0{
-	podemexer=1
-	pulos=0
-	coyotetime=0
-	horizontalspd=-1*x_scale
-}
-	}
-}
 
-else if place_meeting(x+1,y,obj_block) and !chao and coyotetime<=0 and walltime>0 and move=-x_scale {
-	walltime--
-	pulos=0
-	if verticalspd>2||podemexer>0{
-		var vibra = instance_create_depth(x,y,depth,obj_vibracao)
-		vibra.strengh_left = 2
-		vibra.strengh_right = 2
-	scr_camera_shake(1)
-	pulos=0
-	
-	
-	}
-	
-		horizontalspd=0
-	if walltime > walltime_max/2 verticalspd=0
-	if walltime < walltime_max/2 verticalspd=2
-	sprite_index=spr_nedekyn_wall
-	if skin=1{
-		sprite_index=spr_nykeden_wall
-	}
-	if skin=2{
-		sprite_index=spr_redekyn_wall
-	}
-	
-	
-		if place_meeting(x+1,y,obj_block){
-		x_scale=1
-		}
-		else{
-			podemexer=1
-			horizontalspd=-1*x_scale
-		}
-	if key_jump{
-		if horizontalspd=0||verticalspd=2{
-		scr_camera_shake(4)
-		podemexer=1
-		pulos=0
-		coyotetime=0
-		verticalspd=0
-		verticalspd=aprroach(-walljump_alturapulo, 5,1.1)
-		horizontalspd=aprroach(-12*x_scale, 0,1.1)
-		
-	}
-if key_down || walltime<=0{
-	podemexer=1
-	pulos=0
-	coyotetime=0
-	horizontalspd=-1*x_scale
-}
-	}
-}
-else{
-	walltime=walltime_max
-}
-
-// Aqui termina o código do wall jump e começa o do smash
-if !place_meeting(x,y+1,obj_block) and key_down and key_jump  {
-	podemexer=0.001
-	pulos=0
-	estado = scr_nedekyn_smash
-	verticalspd=-7
-	verticalspdmin=-30
-	verticalspdmax=30
-	instance_create_layer(x,y,"Instances",obj_efeito_duplopulo)
-
-}
 //Aqui termina o código do smash e começa o da esquiva
 if place_meeting(x,y+1,obj_block) and key_dodge and alarm[1]<=0{
 	scr_camera_shake(3)
@@ -384,38 +268,31 @@ if key_left x_scale=-1
 if key_right x_scale=1
 	gun--
 	if gun<=0 gun=gunmax
-	if gun=gunmax and tiros>0{
+	if tiros>0{
+		if gun=gunmax{
 	tiros--
 	instance_create_layer(x+x_scale*-10,y-65,"instances",obj_nedekyn_municao)
-	if move=1 || move=-1 || move=0 and !key_up{
+	if move=1 || move=-1 || move=0 {
+		if !key_up{
 if skin=0 sprite_index = spr_nedekyn_gun
-obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+		}
 }
-if move=1 and key_up{
-obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
-obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+if key_right and key_up{
 	if skin=0 sprite_index = spr_nedekyn_gun_d_up
 }
-if move=-1 and key_up{
-	if skin=0 sprite_index = spr_nedekyn_gun_d_up
-obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
-obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
+if key_left and key_up{
+if skin=0 sprite_index = spr_nedekyn_gun_d_up
 }
 if  move=1 and key_down{
-obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd
-obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 if skin=0 sprite_index = spr_nedekyn_gun_d_down
 }
 if move=-1 and key_down{
 if skin=0 sprite_index = spr_nedekyn_gun_d_down
-obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd
-obj_nedekyn_municao.horizontalspd=obj_nedekyn_municao.horizontalmaxspd*x_scale
 }
-if move=0 and key_up{
-	sprite_index=spr_nedekyn_gun_up
-obj_nedekyn_municao.verticalspd=obj_nedekyn_municao.verticalmaxspd*-1
-obj_nedekyn_municao.image_angle=90
+if key_up and !key_right and !key_left{
+sprite_index=spr_nedekyn_gun_up
 }
+		}
 	}
 	
 	var chao = place_meeting(x,y+1,obj_block)

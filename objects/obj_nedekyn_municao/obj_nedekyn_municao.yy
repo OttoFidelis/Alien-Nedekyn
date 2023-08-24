@@ -35,5 +35,5 @@
     "path": "sprites/spr_nedekyn_municao/spr_nedekyn_municao.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

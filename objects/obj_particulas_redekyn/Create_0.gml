@@ -3,7 +3,7 @@
 sistema = part_system_create()
 tipo = part_type_create()
 emitter = part_emitter_create(sistema)
-part_type_shape (tipo,pt_shape_cloud)
+part_type_shape (tipo,pt_shape_smoke)
 part_type_alpha2(tipo,1,0)
 part_type_color3(tipo,c_yellow,c_red,c_maroon)
 part_type_size(tipo,0.02,0.5,0,0)
