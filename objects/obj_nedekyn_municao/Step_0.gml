@@ -8,13 +8,6 @@ var move = key_right - key_left
 var verticalmove=key_down-key_up
 var nedekyn=obj_nedekyn
 
-if nedekyn.gun=nedekyn.gunmax{
-if key_left horizontalspd=horizontalmaxspd*-1
-if key_right horizontalspd=horizontalmaxspd
-if move=0 and !key_up horizontalspd=horizontalmaxspd*obj_nedekyn.x_scale
-if key_up verticalspd=verticalmaxspd*-1
-if key_down and move!=0 verticalspd=verticalmaxspd
-}
 if obj_nedekyn.x_scale=-1 and !key_left{
 	if key_right{
 		instance_destroy()
