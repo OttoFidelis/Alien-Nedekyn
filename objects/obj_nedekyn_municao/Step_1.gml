@@ -35,7 +35,7 @@ if key_up and move!=0 and nedekyn.gun=nedekyn.gunmax{
 		horizontalspd=0
 	}
 if key_down and move!=0 and nedekyn.gun=nedekyn.gunmax{ 
-	state=5]~~ç´´´´´´´´´´´´
+	state=5
 	if state!=5 instance_destroy()
 	verticalspd=verticalmaxspd
 	
