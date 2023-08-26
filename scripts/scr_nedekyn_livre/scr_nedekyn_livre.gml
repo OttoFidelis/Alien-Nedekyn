@@ -198,7 +198,7 @@ function scr_nedekyn_dodge(){
 	if skin=2{
 	sprite_index=spr_redekyn_dodge
 	}
-	horizontalspd = 24*x_scale
+	horizontalspd = 24*x_scale*-1
 	if image_index >= image_number-1{
 		estado = scr_nedekyn_livre
 		alarm[1]=30
