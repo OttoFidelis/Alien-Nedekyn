@@ -175,7 +175,7 @@ if addtiros<=0{
 if chao {
 	if key_gun and tiros>0{
 	estado=scr_nedekyn_gun 
-	gun=gunmax+2
+	gun=gunmax+1
 	}
 	}
 	if tiros<100{
@@ -272,7 +272,9 @@ if key_right x_scale=1
 		if gun=gunmax{
 	tiros--
 	instance_create_layer(x+x_scale*-10,y-65,"instances",obj_nedekyn_municao)
-	if move=1 || move=-1 || move=0 {
+		}
+	}
+		if move=1 || move=-1 || move=0 {
 		if !key_up{
 if skin=0 sprite_index = spr_nedekyn_gun
 		}
@@ -292,9 +294,6 @@ if skin=0 sprite_index = spr_nedekyn_gun_d_down
 if key_up and !key_right and !key_left{
 sprite_index=spr_nedekyn_gun_up
 }
-		}
-	}
-	
 	var chao = place_meeting(x,y+1,obj_block)
 	var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)
 

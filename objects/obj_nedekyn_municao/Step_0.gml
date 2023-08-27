@@ -7,49 +7,6 @@ var key_up = keyboard_check(vk_up)||keyboard_check(ord("W"))||gamepad_button_che
 var move = key_right - key_left
 var verticalmove=key_down-key_up
 var nedekyn=obj_nedekyn
-if key_right and nedekyn.gun=nedekyn.gunmax{
-	state=0
-	if state!=0 instance_destroy()
-	horizontalspd=horizontalmaxspd
-	}
-	if key_left and nedekyn.gun=nedekyn.gunmax{
-	state=1
-	if state!=1 instance_destroy()
-	horizontalspd=horizontalmaxspd*-1
-	}
-if move=0 and nedekyn.gun=nedekyn.gunmax { 
-	state=2
-	if state!=2 instance_destroy()
-	horizontalspd=horizontalmaxspd*obj_nedekyn.x_scale
-	}
-if key_up and move!=0 and nedekyn.gun=nedekyn.gunmax{ 
-	state=3
-	if state!=3 instance_destroy()
-	verticalspd=verticalmaxspd*-1
-	}
-	if key_up and move=0 and nedekyn.gun=nedekyn.gunmax {
-		state=4
-		if state!=4 instance_destroy()
-		verticalspd=verticalmaxspd*-1 
-		horizontalspd=0
-	}
-if key_down and move!=0 and nedekyn.gun=nedekyn.gunmax{ 
-	state=5
-	if state!=5 instance_destroy()
-	verticalspd=verticalmaxspd
-	
-	}
-
-if obj_nedekyn.x_scale=-1 and !key_left{
-	if key_right{
-		instance_destroy()
-	}
-}
-if obj_nedekyn.x_scale=1 and !key_right{
-	if key_left{
-		instance_destroy()
-	}
-}
 
 if place_meeting(x+horizontalspd,y,obj_block){
 	while !place_meeting(x+sign(horizontalspd),y,obj_block){
@@ -73,9 +30,7 @@ if place_meeting(x,y+sign(verticalspd),obj_block) and verticalspd>0{
 	instance_create_layer(x,y+12,"Particulas",obj_efeito_tiro_impacto_chao)
 	instance_destroy()
 }
-if obj_nedekyn.estado=scr_nedekyn_livre{
-	instance_destroy()
-}
+
 
 x+=horizontalspd
 y+=verticalspd
