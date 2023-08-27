@@ -152,7 +152,7 @@ jumptime--
 
 //Aqui termina o código do smash e começa o da esquiva
 if place_meeting(x,y+1,obj_block) and key_dodge and alarm[1]<=0{
-	scr_camera_shake(3)
+	scr_camera_shake(1)
 	estado = scr_nedekyn_dodge
 	image_index=0
 	instance_create_layer(x,y,"Efeitos",obj_efeito_dodge)
@@ -198,14 +198,14 @@ function scr_nedekyn_dodge(){
 	if skin=2{
 	sprite_index=spr_redekyn_dodge
 	}
-	horizontalspd = 24*x_scale*-1
+	horizontalspd = aprroach(19*x_scale*-1,0,1.5)
 	if image_index >= image_number-1{
 		estado = scr_nedekyn_livre
-		alarm[1]=30
+		alarm[1]=6
 	}
 	if !place_meeting(x,y+3,obj_block){
 		estado = scr_nedekyn_livre
-		alarm[1] = 30
+		alarm[1] = 6
 	}
 	
 }

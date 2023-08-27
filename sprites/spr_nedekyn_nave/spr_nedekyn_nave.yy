@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_nedekyn_nave",
   "bbox_bottom": 382,
-  "bbox_left": 2,
+  "bbox_left": 3,
   "bbox_right": 396,
   "bbox_top": 62,
   "bboxMode": 0,

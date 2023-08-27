@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Nedekyn",
-    "path": "folders/Scripts/Nedekyn.yy",
+    "name": "Alien Nedekyn",
+    "path": "Alien Nedekyn.yyp",
   },
 }

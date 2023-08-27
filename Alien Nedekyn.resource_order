@@ -92,6 +92,7 @@
     {"name":"spr_nedekyn_mask","order":9,"path":"sprites/spr_nedekyn_mask/spr_nedekyn_mask.yy",},
     {"name":"spr_efeito_dodge","order":2,"path":"sprites/spr_efeito_dodge/spr_efeito_dodge.yy",},
     {"name":"spr_grama_bloco1_beiradaR","order":6,"path":"sprites/spr_grama_bloco1_beiradaR/spr_grama_bloco1_beiradaR.yy",},
+    {"name":"scr_nedekyn_livre","order":14,"path":"scripts/scr_nedekyn_livre/scr_nedekyn_livre.yy",},
     {"name":"obj_grama_bloco1_rampa","order":7,"path":"objects/obj_grama_bloco1_rampa/obj_grama_bloco1_rampa.yy",},
     {"name":"crv_vibrate_linear_fade_in","order":1,"path":"animcurves/crv_vibrate_linear_fade_in/crv_vibrate_linear_fade_in.yy",},
     {"name":"spr_rampaL","order":6,"path":"sprites/spr_rampaL/spr_rampaL.yy",},
