@@ -11,6 +11,39 @@ repeat(abs(horizontalspd)){
 			}	
 		}
 	}
+	if place_meeting(x+sign(horizontalspd),y,obj_block){
+		if !place_meeting(x+sign(horizontalspd),y-2,obj_block)
+		y--
+	}
+	else{
+		if !place_meeting(x+sign(horizontalspd),y+2,obj_block){
+			if place_meeting(x+sign(horizontalspd),y+3,obj_block){
+				y++
+			}	
+		}
+	}
+		if place_meeting(x+sign(horizontalspd),y,obj_block){
+		if !place_meeting(x+sign(horizontalspd),y-3,obj_block)
+		y--
+	}
+	else{
+		if !place_meeting(x+sign(horizontalspd),y+3,obj_block){
+			if place_meeting(x+sign(horizontalspd),y+4,obj_block){
+				y++
+			}	
+		}
+	}
+		if place_meeting(x+sign(horizontalspd),y,obj_block){
+		if !place_meeting(x+sign(horizontalspd),y-4,obj_block)
+		y--
+	}
+	else{
+		if !place_meeting(x+sign(horizontalspd),y+4,obj_block){
+			if place_meeting(x+sign(horizontalspd),y+5,obj_block){
+				y++
+			}	
+		}
+	}
 	
 	if place_meeting(x+sign(horizontalspd),y,obj_block){
 		horizontalspd=0
