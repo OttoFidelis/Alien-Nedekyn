@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_terra_pedra1",
-  "bbox_bottom": 188,
-  "bbox_left": 44,
-  "bbox_right": 179,
-  "bbox_top": 97,
+  "name": "spr_grama_bloco_beirada2",
+  "bbox_bottom": 63,
+  "bbox_left": 0,
+  "bbox_right": 63,
+  "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 0,
   "collisionTolerance": 0,
@@ -13,16 +13,42 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a0624a98-4bfc-4a64-b9f1-9436a0936711",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0237e398-e1fd-409a-b724-8c86f2bd617f",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 200,
+  "height": 64,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6a8c29ad-7d57-4f90-9c96-7a08bc6f7f98","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageFolderLayer","resourceVersion":"1.0","name":"31225cd2-555d-48a5-a380-27004cc349e1","blendMode":0,"displayName":"Layer Group 1","isLocked":false,"layers":[
+        {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3702c371-2740-4b5b-ae26-1862abe41f38","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+      ],"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"96bd143d-5c83-49c7-af19-cf00162aa9a4","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
-  "nineSlice": null,
+  "nineSlice": {
+    "resourceType": "GMNineSliceData",
+    "resourceVersion": "1.0",
+    "bottom": 0,
+    "enabled": false,
+    "guideColour": [
+      4294902015,
+      4294902015,
+      4294902015,
+      4294902015,
+    ],
+    "highlightColour": 1728023040,
+    "highlightStyle": 0,
+    "left": 24,
+    "right": 28,
+    "tileMode": [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "top": 0,
+  },
   "origin": 0,
   "parent": {
     "name": "Tilesets Terra",
@@ -32,7 +58,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_terra_pedra1",
+    "name": "spr_grama_bloco_beirada2",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +80,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a0624a98-4bfc-4a64-b9f1-9436a0936711","path":"sprites/spr_terra_pedra1/spr_terra_pedra1.yy",},},},"Disabled":false,"id":"bf022a39-0ffa-4351-8303-57edcd8cdab5","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0237e398-e1fd-409a-b724-8c86f2bd617f","path":"sprites/spr_grama_bloco_beirada2/spr_grama_bloco_beirada2.yy",},},},"Disabled":false,"id":"d3bdb55d-52a5-409f-92f2-d5b64842eead","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +96,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 200,
+  "width": 64,
 }
