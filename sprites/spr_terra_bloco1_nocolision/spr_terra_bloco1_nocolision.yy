@@ -1,13 +1,13 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_grama_bloco1_rampa",
-  "bbox_bottom": 63,
+  "name": "spr_terra_bloco1_nocolision",
+  "bbox_bottom": 255,
   "bbox_left": 0,
-  "bbox_right": 62,
+  "bbox_right": 255,
   "bbox_top": 0,
   "bboxMode": 0,
-  "collisionKind": 0,
+  "collisionKind": 1,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 256,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageFolderLayer","resourceVersion":"1.0","name":"31225cd2-555d-48a5-a380-27004cc349e1","blendMode":0,"displayName":"Layer Group 1","isLocked":false,"layers":[
@@ -25,30 +25,7 @@
       ],"opacity":100.0,"visible":true,},
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"96bd143d-5c83-49c7-af19-cf00162aa9a4","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
-  "nineSlice": {
-    "resourceType": "GMNineSliceData",
-    "resourceVersion": "1.0",
-    "bottom": 0,
-    "enabled": false,
-    "guideColour": [
-      4294902015,
-      4294902015,
-      4294902015,
-      4294902015,
-    ],
-    "highlightColour": 1728023040,
-    "highlightStyle": 0,
-    "left": 24,
-    "right": 28,
-    "tileMode": [
-      0,
-      0,
-      0,
-      0,
-      0,
-    ],
-    "top": 0,
-  },
+  "nineSlice": null,
   "origin": 0,
   "parent": {
     "name": "Tilesets Terra",
@@ -58,7 +35,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_grama_bloco1_rampa",
+    "name": "spr_terra_bloco1_nocolision",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -80,7 +57,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0237e398-e1fd-409a-b724-8c86f2bd617f","path":"sprites/spr_grama_bloco1_rampa/spr_grama_bloco1_rampa.yy",},},},"Disabled":false,"id":"2cb55037-da83-4d89-a90a-fb6a0f554657","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0237e398-e1fd-409a-b724-8c86f2bd617f","path":"sprites/spr_terra_bloco1_nocolision/spr_terra_bloco1_nocolision.yy",},},},"Disabled":false,"id":"badc635e-62be-4715-a9c7-4792423806e4","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -96,5 +73,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 256,
 }
