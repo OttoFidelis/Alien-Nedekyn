@@ -22,7 +22,7 @@ if debug=1{
 	if obj_nedekyn.estado = scr_nedekyn_smash{
 	draw_text(x,y+20,"Estado: "+"esmagando")
 	}
-	if obj_nedekyn.estado = scr_nedekyn_gun
+	if obj_nedekyn.estado = scr_nedekyn_gun{
 	draw_text(x,y+20,"Estado: "+"atirando")
 	}
 	if obj_nedekyn.verticalspd <0{
