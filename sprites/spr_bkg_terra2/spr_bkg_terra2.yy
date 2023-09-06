@@ -4,7 +4,7 @@
   "name": "spr_bkg_terra2",
   "bbox_bottom": 719,
   "bbox_left": 0,
-  "bbox_right": 1601,
+  "bbox_right": 1602,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 1602,
+  "width": 1603,
 }

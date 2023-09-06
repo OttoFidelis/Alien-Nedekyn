@@ -15,7 +15,8 @@ estado_nedekyn = function(){
 	}
 	if alvo.horizontalspd=0 and x!=alvo.x {x=aprroach(x,alvo.x,2.4)}
 	else{x= aprroach(x,alvo.x,5.5)}
-	y=aprroach(y,alvo.y,8)
+	if alvo.estado=scr_nedekyn_dodge x=aprroach(x,alvo.x,20)
+	y=aprroach(y,alvo.y,14)
 }
 estado=estado_nedekyn
 

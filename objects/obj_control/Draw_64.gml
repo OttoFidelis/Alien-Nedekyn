@@ -58,6 +58,11 @@ if debug=1{
 	draw_text(x,y+220,"Parado")
 	}
 	draw_text(x,y+240,"Tiros: "+ string (obj_nedekyn.tiros))
+	draw_text(x,y+260,"Passagens secretas: "+ string (passagens_secretas))
+	draw_text(x,y+280,"Percentual de jogo: "+ string (percentual)+"%")
+	draw_text(x,y+300,"Percentual de passsagens secretas: "+ string (percentual_pas_secretas)+"%")
+	draw_text(x,y+320,"Percentual de fases passadas: "+ string (percentualfases)+"%")
+	draw_text(x,y+340,"Percentual de skins desbloqueadas: "+ string (percentual_skins)+"%")
 }
 
 
