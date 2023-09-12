@@ -17,6 +17,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Notes","folderPath":"folders/Notes.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Câmera","folderPath":"folders/Objects/Câmera.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Coletáveis","folderPath":"folders/Objects/Coletáveis.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Colisões","folderPath":"folders/Objects/Colisões.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Controladores","folderPath":"folders/Objects/Controladores.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Controle","folderPath":"folders/Objects/Controle.yy",},
@@ -35,6 +36,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sounds","folderPath":"folders/Sounds.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Background Terra","folderPath":"folders/Sprites/Background Terra.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Coletáveis","folderPath":"folders/Sprites/Coletáveis.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Colisões","folderPath":"folders/Sprites/Colisões.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Efeitos","folderPath":"folders/Sprites/Efeitos.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Nedekyn","folderPath":"folders/Sprites/Nedekyn.yy",},
@@ -49,7 +51,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.0.98",
   },
   "resources": [
     {"id":{"name":"spr_grama_bloco1_rampa","path":"sprites/spr_grama_bloco1_rampa/spr_grama_bloco1_rampa.yy",},},
@@ -88,6 +90,7 @@
     {"id":{"name":"spr_bkg_terra4","path":"sprites/spr_bkg_terra4/spr_bkg_terra4.yy",},},
     {"id":{"name":"spr_nedekyn_dodge","path":"sprites/spr_nedekyn_dodge/spr_nedekyn_dodge.yy",},},
     {"id":{"name":"spr_nedekyn_nave","path":"sprites/spr_nedekyn_nave/spr_nedekyn_nave.yy",},},
+    {"id":{"name":"obj_gun","path":"objects/obj_gun/obj_gun.yy",},},
     {"id":{"name":"spr_grama_bloco2_beirada","path":"sprites/spr_grama_bloco2_beirada/spr_grama_bloco2_beirada.yy",},},
     {"id":{"name":"shd_shockwave","path":"shaders/shd_shockwave/shd_shockwave.yy",},},
     {"id":{"name":"spr_nedekyn_down","path":"sprites/spr_nedekyn_down/spr_nedekyn_down.yy",},},
@@ -126,6 +129,7 @@
     {"id":{"name":"obj_colisao_blockmexe","path":"objects/obj_colisao_blockmexe/obj_colisao_blockmexe.yy",},},
     {"id":{"name":"obj_grama1","path":"objects/obj_grama1/obj_grama1.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
+    {"id":{"name":"spr_gun","path":"sprites/spr_gun/spr_gun.yy",},},
     {"id":{"name":"spr_nedekyn_mask","path":"sprites/spr_nedekyn_mask/spr_nedekyn_mask.yy",},},
     {"id":{"name":"spr_efeito_dodge","path":"sprites/spr_efeito_dodge/spr_efeito_dodge.yy",},},
     {"id":{"name":"spr_grama_bloco1_beiradaR","path":"sprites/spr_grama_bloco1_beiradaR/spr_grama_bloco1_beiradaR.yy",},},
@@ -141,6 +145,7 @@
     {"id":{"name":"spr_redekyn_idle","path":"sprites/spr_redekyn_idle/spr_redekyn_idle.yy",},},
     {"id":{"name":"obj_efeito_dodge","path":"objects/obj_efeito_dodge/obj_efeito_dodge.yy",},},
     {"id":{"name":"spr_efeito_coracao","path":"sprites/spr_efeito_coracao/spr_efeito_coracao.yy",},},
+    {"id":{"name":"obj_hud","path":"objects/obj_hud/obj_hud.yy",},},
     {"id":{"name":"crv_vibrate_flat","path":"animcurves/crv_vibrate_flat/crv_vibrate_flat.yy",},},
     {"id":{"name":"spr_nykeden_down","path":"sprites/spr_nykeden_down/spr_nykeden_down.yy",},},
     {"id":{"name":"spr_grama1_desfazendo","path":"sprites/spr_grama1_desfazendo/spr_grama1_desfazendo.yy",},},
@@ -193,6 +198,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"room_test","path":"rooms/room_test/room_test.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],

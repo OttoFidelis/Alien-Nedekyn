@@ -1,8 +1,8 @@
 /// @description Aqui ficam as variáveis
 // You can write your code in this editor
-tiros=300
+tiros=1000
 gun=0
-gunmax=4
+gunmax=2.5
 debug=0
 addtiros=0
 addtirosmax=25
