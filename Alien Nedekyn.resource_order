@@ -10,6 +10,7 @@
     {"name":"Controladores","order":12,"path":"folders/Objects/Controladores.yy",},
     {"name":"Controle","order":11,"path":"folders/Objects/Controle.yy",},
     {"name":"Efeitos","order":9,"path":"folders/Objects/Efeitos.yy",},
+    {"name":"HUD","order":15,"path":"folders/Objects/HUD.yy",},
     {"name":"Nedekyn","order":13,"path":"folders/Objects/Nedekyn.yy",},
     {"name":"Partículas","order":7,"path":"folders/Objects/Partículas.yy",},
     {"name":"Tilesets_Terra","order":5,"path":"folders/Objects/Tilesets_Terra.yy",},
@@ -35,7 +36,6 @@
     {"name":"Tile Sets","order":10,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":11,"path":"folders/Timelines.yy",},
     {"name":"Vibration","order":12,"path":"folders/Vibration.yy",},
-    {"name":"HUD","order":15,"path":"folders/Objects/HUD.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_grama_bloco1_rampa","order":10,"path":"sprites/spr_grama_bloco1_rampa/spr_grama_bloco1_rampa.yy",},
