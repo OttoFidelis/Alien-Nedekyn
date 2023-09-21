@@ -27,6 +27,7 @@
     {"name":"Coletáveis","order":20,"path":"folders/Sprites/Coletáveis.yy",},
     {"name":"Colisões","order":16,"path":"folders/Sprites/Colisões.yy",},
     {"name":"Efeitos","order":1,"path":"folders/Sprites/Efeitos.yy",},
+    {"name":"Hud","order":21,"path":"folders/Sprites/Hud.yy",},
     {"name":"Nedekyn","order":2,"path":"folders/Sprites/Nedekyn.yy",},
     {"name":"Nykeden","order":3,"path":"folders/Sprites/Nykeden.yy",},
     {"name":"Redekyn","order":18,"path":"folders/Sprites/Redekyn.yy",},
@@ -34,7 +35,6 @@
     {"name":"Tile Sets","order":10,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":11,"path":"folders/Timelines.yy",},
     {"name":"Vibration","order":12,"path":"folders/Vibration.yy",},
-    {"name":"Hud","order":21,"path":"folders/Sprites/Hud.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_grama_bloco1_rampa","order":10,"path":"sprites/spr_grama_bloco1_rampa/spr_grama_bloco1_rampa.yy",},
