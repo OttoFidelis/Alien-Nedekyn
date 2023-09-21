@@ -4,7 +4,7 @@
   "name": "spr_nedekyn_gun",
   "bbox_bottom": 99,
   "bbox_left": 172,
-  "bbox_right": 276,
+  "bbox_right": 221,
   "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,

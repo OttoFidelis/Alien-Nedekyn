@@ -1,4 +1,4 @@
-/// @description Inserir descrição aqui
+                    /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 var key_left = keyboard_check(vk_left)||keyboard_check(ord("A"))||gamepad_button_check(0,gp_padl)
 var key_right = keyboard_check(vk_right)||keyboard_check(ord("D"))||gamepad_button_check(0,gp_padr)
