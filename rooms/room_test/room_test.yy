@@ -313,6 +313,7 @@
     {"name":"inst_4DD64C23","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_4507AFC9","path":"rooms/room_test/room_test.yy",},
     {"name":"inst_7A14D8DE","path":"rooms/room_test/room_test.yy",},
+    {"name":"inst_4062E16D","path":"rooms/room_test/room_test.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -320,6 +321,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1CB072DD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_particulas_redekyn","path":"objects/obj_particulas_redekyn/obj_particulas_redekyn.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":32.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6B3F6447","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_particulas","path":"objects/obj_particulas/obj_particulas.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":55.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4DD64C23","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_particulas_nykeden","path":"objects/obj_particulas_nykeden/obj_particulas_nykeden.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":23.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4062E16D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_mira","path":"objects/obj_mira/obj_mira.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":576.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"chuva","assets":[
         {"resourceType":"GMRParticleSystem","resourceVersion":"1.0","name":"particle_6C144CBE","colour":4294967295,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"particleSystemId":{"name":"ParticleSystem1","path":"particles/ParticleSystem1/ParticleSystem1.yy",},"rotation":0.0,"scaleX":3.2265644,"scaleY":9.187504,"x":826.42114,"y":73.42044,},

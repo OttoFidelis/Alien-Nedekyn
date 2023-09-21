@@ -35,6 +35,7 @@
     {"name":"Tile Sets","order":10,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":11,"path":"folders/Timelines.yy",},
     {"name":"Vibration","order":12,"path":"folders/Vibration.yy",},
+    {"name":"HUD","order":15,"path":"folders/Objects/HUD.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_grama_bloco1_rampa","order":10,"path":"sprites/spr_grama_bloco1_rampa/spr_grama_bloco1_rampa.yy",},
