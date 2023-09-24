@@ -37,3 +37,5 @@ walltime_max = 60
 estado = scr_nedekyn_livre
 alarm3=20
 velocidadegrama=5.5
+
+window_set_cursor(cr_none)
