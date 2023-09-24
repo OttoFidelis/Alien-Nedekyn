@@ -157,6 +157,7 @@
     {"id":{"name":"spr_nedekyn_jump","path":"sprites/spr_nedekyn_jump/spr_nedekyn_jump.yy",},},
     {"id":{"name":"spr_terra_pedra2","path":"sprites/spr_terra_pedra2/spr_terra_pedra2.yy",},},
     {"id":{"name":"obj_parllax","path":"objects/obj_parllax/obj_parllax.yy",},},
+    {"id":{"name":"obj_nedekyn_braco","path":"objects/obj_nedekyn_braco/obj_nedekyn_braco.yy",},},
     {"id":{"name":"Sprite16","path":"sprites/Sprite16/Sprite16.yy",},},
     {"id":{"name":"spr_mira","path":"sprites/spr_mira/spr_mira.yy",},},
     {"id":{"name":"obj_efeito_duplopulo","path":"objects/obj_efeito_duplopulo/obj_efeito_duplopulo.yy",},},

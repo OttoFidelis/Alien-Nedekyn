@@ -6,3 +6,4 @@ if place_meeting(x+horizontalspd,y,obj_gun){
 if alarm[4]>0{
 	tiros++
 }
+

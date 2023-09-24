@@ -122,6 +122,7 @@
     {"name":"spr_nedekyn_jump","order":1,"path":"sprites/spr_nedekyn_jump/spr_nedekyn_jump.yy",},
     {"name":"spr_terra_pedra2","order":12,"path":"sprites/spr_terra_pedra2/spr_terra_pedra2.yy",},
     {"name":"obj_parllax","order":2,"path":"objects/obj_parllax/obj_parllax.yy",},
+    {"name":"obj_nedekyn_braco","order":1,"path":"objects/obj_nedekyn_braco/obj_nedekyn_braco.yy",},
     {"name":"Sprite16","order":9,"path":"sprites/Sprite16/Sprite16.yy",},
     {"name":"obj_efeito_duplopulo","order":1,"path":"objects/obj_efeito_duplopulo/obj_efeito_duplopulo.yy",},
     {"name":"obj_rampaL","order":3,"path":"objects/obj_rampaL/obj_rampaL.yy",},

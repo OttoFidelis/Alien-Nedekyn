@@ -1,15 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_mira",
+  "name": "obj_nedekyn_braco",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "HUD",
-    "path": "folders/Objects/HUD.yy",
+    "name": "Nedekyn",
+    "path": "folders/Objects/Nedekyn.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_mira",
-    "path": "sprites/spr_mira/spr_mira.yy",
+    "name": "spr_nedekyn_braco",
+    "path": "sprites/spr_nedekyn_braco/spr_nedekyn_braco.yy",
   },
   "spriteMaskId": null,
   "visible": true,
