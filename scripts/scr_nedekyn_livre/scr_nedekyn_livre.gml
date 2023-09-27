@@ -269,7 +269,6 @@ function scr_nedekyn_gun(){
 	instance_create_layer(x+x_scale*-10,y-65,"instances",obj_nedekyn_municao)
 		}
 	}
-	obj_nedekyn_municao.speed=30
 	sprite_index=spr_nedekyn_gun
 	var chao = place_meeting(x,y+1,obj_block)
 	var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)

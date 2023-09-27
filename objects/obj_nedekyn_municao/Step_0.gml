@@ -11,4 +11,3 @@ if place_meeting(x+sign(speed),y,obj_block) and !place_meeting(x,y-1,obj_block){
 
 
 
-
