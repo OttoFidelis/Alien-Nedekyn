@@ -4,7 +4,7 @@
   "name": "spr_planta1",
   "bbox_bottom": 90,
   "bbox_left": 19,
-  "bbox_right": 87,
+  "bbox_right": 88,
   "bbox_top": 57,
   "bboxMode": 0,
   "collisionKind": 1,
