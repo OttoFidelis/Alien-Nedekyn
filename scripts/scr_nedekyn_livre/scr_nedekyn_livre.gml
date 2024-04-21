@@ -173,7 +173,8 @@ if addtiros<=0{
 			addtiros=addtirosmax
 		}
 if chao {
-	if key_gun and tiros>0{
+	if mouse_check_button(mb_left) and tiros>0{
+	instance_create_layer(x-6,y-67,"Braco",obj_nedekyn_braco)
 	estado=scr_nedekyn_gun 
 	gun=gunmax+1
 	}
@@ -259,13 +260,7 @@ function scr_nedekyn_smash(){
 	}
 }
 function scr_nedekyn_gun(){
-var key_up = keyboard_check(vk_up)||keyboard_check(ord("W"))||gamepad_button_check(0,gp_padu)
-var key_left = keyboard_check(vk_left)||keyboard_check(ord("A"))||gamepad_button_check(0,gp_padl)
-var key_right = keyboard_check(vk_right)||keyboard_check(ord("D"))||gamepad_button_check(0,gp_padr)
-var key_down = keyboard_check(vk_down)||keyboard_check(ord("S"))||gamepad_button_check(0,gp_padd)
-var move = key_right - key_left !=0
-if key_left x_scale=-1
-if key_right x_scale=1
+	if obj_mira.x<x x_scale=-1 else x_scale=1
 	gun--
 	if gun<=0 gun=gunmax
 	if tiros>0{
@@ -274,30 +269,11 @@ if key_right x_scale=1
 	instance_create_layer(x+x_scale*-10,y-65,"instances",obj_nedekyn_municao)
 		}
 	}
-		if move=1 || move=-1 || move=0 {
-		if !key_up{
-if skin=0 sprite_index = spr_nedekyn_gun
-		}
-}
-if key_right and key_up{
-	if skin=0 sprite_index = spr_nedekyn_gun_d_up
-}
-if key_left and key_up{
-if skin=0 sprite_index = spr_nedekyn_gun_d_up
-}
-if  move=1 and key_down{
-if skin=0 sprite_index = spr_nedekyn_gun_d_down
-}
-if move=-1 and key_down{
-if skin=0 sprite_index = spr_nedekyn_gun_d_down
-}
-if key_up and !key_right and !key_left{
-sprite_index=spr_nedekyn_gun_up
-}
+	sprite_index=spr_nedekyn_gun
 	var chao = place_meeting(x,y+1,obj_block)
 	var key_gun = keyboard_check(ord("B"))||gamepad_button_check(0,gp_face3)
 
-	if !key_gun || !chao || tiros<=0 estado = scr_nedekyn_livre
+	if !mouse_check_button(mb_left) || !chao || tiros<=0 estado = scr_nedekyn_livre
 	horizontalspd=0
 	verticalspd=0
 }
